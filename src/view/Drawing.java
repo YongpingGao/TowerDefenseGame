@@ -1,14 +1,16 @@
 package view;
 
-import Model.Map.CellState;
-import Model.Map.GameMap;
-import Model.Map.MapImageCollection;
+import model.imagecollection.TowerImageCollection;
+import model.map.CellState;
+import model.map.GameMap;
+import model.imagecollection.MapImageCollection;
+import model.tower.Tower;
+import model.tower.TowerCollection;
+import model.tower.TowerName;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
 import java.awt.image.ImageObserver;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
 
@@ -23,11 +25,11 @@ public class Drawing {
     private final static float ALPHA = 0.3f;
     // input: coordinate(x,y)(pixels), cell size of a cell. And cols number
     // output: nth cell in whole map
-    public static int coordinateConverter(int x, int y, int cols) {
+    public static int coordinateToIndexConverter(int x, int y, int cols) {
         return x / CELL_SIZE + (y / CELL_SIZE) * cols;
     }
 
-    public static int[] indexConverter(int index, int cols){
+    public static int[] indexToCoordinateConverter(int index, int cols){
         int x = index % cols;
         int y = index / cols;
         return new int[]{x * CELL_SIZE, y * CELL_SIZE};
@@ -40,7 +42,7 @@ public class Drawing {
         for(int i = 0; i < CELL_SIZE * map.getmCols(); i = i + CELL_SIZE){
             for(int j = 0; j < CELL_SIZE * map.getmRows(); j = j + CELL_SIZE){
 
-                switch (cellList.get(coordinateConverter(i, j, mapCols))){
+                switch (cellList.get(coordinateToIndexConverter(i, j, mapCols))){
                     case Grass:
                         g2d.drawImage(MapImageCollection.mapImages.get(CellState.Grass), i, j, observer);
                         break;
@@ -58,6 +60,7 @@ public class Drawing {
                         break;
                     case Tower:
                         g2d.drawImage(MapImageCollection.mapImages.get(CellState.Grass), i, j, observer);
+                        g2d.drawImage(TowerImageCollection.towerImages.get(TowerName.TowerA1), i, j, observer);
                         break;
                     case Chosen:
                         g2d.drawImage(MapImageCollection.mapImages.get(CellState.Grass), i, j, observer);
@@ -69,24 +72,25 @@ public class Drawing {
         }
         g2d.dispose();
     }
+
+    public static void drawTowers(Graphics g, TowerCollection towerCollection, GameMap gameMap, ImageObserver observer){
+
+//        if(towerCollection.getTowers().size() > 0){
+//            Graphics2D g2d = (Graphics2D) g.create();;
+//            for (Map.Entry<Integer, Tower> entry : towerCollection.getTowers().entrySet()) {
+//                Integer index = entry.getKey();
+//                Tower tower = entry.getValue();
 //
-////    g.drawImage(new ImageIcon("res/tower1.png").getImage(),240,270,this);
-//    public static void drawTower(Graphics g, int cols, HashMap<Integer, Tower> towerMap, ImageObserver observer){
-//
-//        Graphics2D g2d = (Graphics2D) g.create();;
-//        for (Map.Entry<Integer, Tower> entry : towerMap.entrySet()) {
-//            Integer index = entry.getKey();
-//            Tower tower = entry.getValue();
-//            if(tower.getTid() != TowerID.TowerNull) { // if TowerID == TowerNull, skip, draw nothing.
-//                int[] arr = indexConverter(index, cols);
-//                g2d.drawImage(new ImageCollection().getImage(tower.getTid().getName()) , arr[0], arr[1], observer);
-//
+//                if(tower.getTowerName() != TowerName.TowerNull) { // if TowerID == TowerNull, skip, draw nothing.
+//                    int[] arr = indexToCoordinateConverter(index, gameMap.getmCols());
+//                    g2d.drawImage(TowerImageCollection.towerImages.get(tower.getTowerName()), arr[0], arr[1], observer);
+//                }
 //            }
+//            g2d.dispose();
 //        }
-//
-//        g2d.dispose();
-//
-//    }
+
+
+    }
 //
 //    public static void drawCritters(Graphics g, Critter c, ImageObserver observer){
 //        Graphics2D g2d = (Graphics2D) g.create();

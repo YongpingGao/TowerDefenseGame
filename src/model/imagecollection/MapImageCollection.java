@@ -1,5 +1,7 @@
-package Model.Map;
+package model.imagecollection;
 
+
+import model.map.CellState;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,10 +10,8 @@ import java.util.HashMap;
 /**
  * Created by yongpinggao on 3/12/16.
  */
-public class MapImageCollection {
+public class MapImageCollection extends ImageCollection {
 
-    private static String BASE_URL = "res/";
-    private static String PNG = ".png";
     public static HashMap<CellState, Image> mapImages = new HashMap<>();
 
     static {

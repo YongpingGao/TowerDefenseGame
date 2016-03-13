@@ -1,8 +1,8 @@
 package controller;
 
-import Model.Map.GameMap;
-import Model.Map.GameMapCollection;
-import view.MainMenuView;
+import model.map.GameMap;
+import model.map.GameMapCollection;
+import view.mainmenuview.MainMenuView;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

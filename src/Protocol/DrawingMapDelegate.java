@@ -1,6 +1,6 @@
 package Protocol;
 
-import Model.Map.GameMap;
+import model.map.GameMap;
 
 /**
  * Created by yongpinggao on 3/12/16.

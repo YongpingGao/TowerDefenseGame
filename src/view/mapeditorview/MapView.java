@@ -1,14 +1,12 @@
 package view.mapeditorview;
 
-import Model.Map.GameMap;
+import model.map.GameMap;
 import Protocol.DrawingMapDelegate;
 import view.BaseWindowView;
 import view.Drawing;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.BufferedImage;
 
 /**
  * Created by yongpinggao on 3/12/16.
@@ -41,24 +39,6 @@ public class MapView extends JPanel {
             super.paintComponent(g);
             Drawing.drawMap(g, map, this);
         }
-
-
-//        public void clearMap(){
-//            // it will let layout manager run again!
-//            mapPanel.revalidate();
-//            cellList.clear();
-//            for(int i = 0; i < mapCols * mapRows; i++)
-//                cellList.add(CellState.GRASS);
-//            repaint();
-//        }
-//
-//        private BufferedImage mapCaptureShot() {
-//            BufferedImage image = new BufferedImage(DrawMap.CELL_SIZE * mapCols, DrawMap.CELL_SIZE * mapRows, BufferedImage.TYPE_INT_RGB);
-//            Graphics g = image.createGraphics();
-//            print(g);
-//            g.dispose();
-//            return image;
-//        }
 
         @Override
         public void refreshMap(GameMap map) {

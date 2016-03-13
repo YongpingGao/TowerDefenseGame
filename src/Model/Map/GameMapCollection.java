@@ -1,4 +1,4 @@
-package Model.Map;
+package model.map;
 
 import utility.FileProcessing;
 
@@ -38,6 +38,7 @@ public class GameMapCollection {
     public static GameMapCollection loadMapsFromFile(){
         return FileProcessing.sharedInstance().readFromJsonFile(JSON_FILE, GameMapCollection.class);
     }
+
 
 
 }

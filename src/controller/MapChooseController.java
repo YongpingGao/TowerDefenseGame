@@ -1,6 +1,6 @@
 package controller;
 
-import Model.Map.GameMapCollection;
+import model.map.GameMapCollection;
 import view.mapchooseview.MapChooseView;
 
 import javax.swing.*;
@@ -30,7 +30,7 @@ public class MapChooseController {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mapChooseView.setVisible(false);
-
+                new MainGameController(mapCollection.getMaps().get(mapChooseView.list.getSelectedIndex())).mainGameView.setVisible(true);
             }
         });
 

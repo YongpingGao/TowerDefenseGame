@@ -1,4 +1,4 @@
-package view;
+package view.mainmenuview;
 
 import javax.swing.*;
 import java.awt.*;

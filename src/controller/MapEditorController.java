@@ -1,8 +1,8 @@
 package controller;
 
-import Model.Map.CellState;
-import Model.Map.GameMap;
-import Model.Map.GameMapCollection;
+import model.map.CellState;
+import model.map.GameMap;
+import model.map.GameMapCollection;
 import Protocol.DrawingMapDelegate;
 import view.Drawing;
 import view.mapeditorview.MapEditorView;
@@ -68,7 +68,7 @@ public class MapEditorController {
                 int x = e.getX();
                 int y = e.getY();
                 ArrayList<CellState> cellList = gameMap.getCells();
-                int index = Drawing.coordinateConverter(x, y, gameMap.getmCols());
+                int index = Drawing.coordinateToIndexConverter(x, y, gameMap.getmCols());
 
                 if (e.getButton() == MouseEvent.BUTTON1) {
                     // Left Click to set maps path

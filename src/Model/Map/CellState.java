@@ -1,4 +1,4 @@
-package Model.Map;
+package model.map;
 
 
 /**

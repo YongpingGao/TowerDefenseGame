@@ -1,4 +1,4 @@
-package Model.Map;
+package model.map;
 
 import java.util.ArrayList;
 
@@ -68,6 +68,27 @@ public class GameMap {
     public void setImageName(String imageName) {
         this.imageName = imageName;
     }
+
+
+    public void setToPlaceTowerState(){
+        for(int i = 0; i < cells.size(); i++){
+            if(cells.get(i) == CellState.Grass){
+                cells.set(i, CellState.ToPlaceTower);
+            } else if(cells.get(i) == CellState.Chosen){
+                cells.set(i, CellState.Tower);
+            }
+        }
+    }
+
+    public void setToGrassState(){
+        for(int i = 0; i < cells.size(); i++){
+            if(cells.get(i) == CellState.ToPlaceTower){
+                cells.set(i, CellState.Grass);
+            }
+        }
+    }
+
+
 }
 
 
