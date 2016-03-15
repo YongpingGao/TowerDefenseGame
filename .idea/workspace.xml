@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8e59cbb-50ba-42ac-b72f-62aac256f056" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/drawing/ShootingEffectDrawing.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/drawing/ShootingEffectDrawing.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/Tower$1.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/Tower$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/wave/WaveFactory.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/wave/WaveFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$10.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$11.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$4.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$5.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$6.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$7.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$8.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$9.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/Tower.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/Tower.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerA.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerCollection.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerCollection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory$1.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/MapView$MapPanel.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/MapView$MapPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/MainGameController.java" afterPath="$PROJECT_DIR$/src/controller/MainGameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/Tower.java" afterPath="$PROJECT_DIR$/src/model/tower/Tower.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/TowerA.java" afterPath="$PROJECT_DIR$/src/model/tower/TowerA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/TowerCollection.java" afterPath="$PROJECT_DIR$/src/model/tower/TowerCollection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/TowerFactory.java" afterPath="$PROJECT_DIR$/src/model/tower/TowerFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/maingameview/MapView.java" afterPath="$PROJECT_DIR$/src/view/maingameview/MapView.java" />
     </list>
     <ignored path="TowerDefenseGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,8 +44,8 @@
       <file leaf-file-name="TowerA.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/tower/TowerA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7730307">
-              <caret line="118" column="31" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="31" />
+            <state vertical-scroll-proportion="-1.6101469">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,11 +57,9 @@
         <entry file="file://$PROJECT_DIR$/src/model/tower/IceTower.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="112" column="11" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="41" />
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3116#3117#0" expanded="true" />
-                <element signature="e#3154#3155#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -252,10 +225,10 @@
         <option value="$PROJECT_DIR$/src/model/tower/TowerCollection.java" />
         <option value="$PROJECT_DIR$/src/view/maingameview/MapView.java" />
         <option value="$PROJECT_DIR$/src/model/tower/Tower.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/IceTower.java" />
         <option value="$PROJECT_DIR$/src/controller/MainGameController.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/TowerA.java" />
         <option value="$PROJECT_DIR$/src/model/wave/WaveFactory.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/IceTower.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/TowerA.java" />
       </list>
     </option>
   </component>
@@ -1493,19 +1466,17 @@
     <entry file="file://$PROJECT_DIR$/src/model/tower/IceTower.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="11" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="41" />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3116#3117#0" expanded="true" />
-            <element signature="e#3154#3155#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/tower/TowerA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7730307">
-          <caret line="118" column="31" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="31" />
+        <state vertical-scroll-proportion="-1.6101469">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,13 +1,11 @@
 package model.tower;
 
-import model.critter.Critter;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by yongpinggao on 3/13/16.
@@ -15,9 +13,7 @@ import java.util.Set;
 
 public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEffect{
 
-    boolean isShooting = true;
     protected Timer shootTimer;
-
 
     public TowerA(int level){
         if(level <= MAX_LEVEL) {
@@ -34,7 +30,6 @@ public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEf
 
                     if(!crittersInRange.isEmpty()){
                         shoot();
-                        System.out.println(critterUnderAttack);
                     }
                     else critterUnderAttack = null;
                 }
@@ -95,7 +90,6 @@ public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEf
     public void shoot() {
         super.shoot();
         critterUnderAttack = shootingStrategy.targetOnCritters(crittersInRange);
-
         if(isShooting) { //if critter is get attacked(a line is drawn)
             int health = critterUnderAttack.getCurrentHealth();
             health -= power;
@@ -104,9 +98,7 @@ public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEf
                 crittersInRange.remove(critterUnderAttack);
                 critterUnderAttack = null;
             }
-
         }
-
     }
 
     @Override

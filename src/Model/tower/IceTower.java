@@ -1,13 +1,12 @@
 package model.tower;
 
-import model.critter.Critter;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashSet;
-import java.util.Set;
+
 
 /**
  * Created by yongpinggao on 3/15/16.
@@ -15,22 +14,21 @@ import java.util.Set;
 // Freezing the critter for a time
 public class IceTower extends Tower implements ShootingBehavior, DrawingShootingEffect{
 
-    boolean isShooting;
+
     protected Timer shootTimer;
-    protected Set<Critter> crittersInRange;
 
     public IceTower(int level){
         if(level <= MAX_LEVEL) {
             crittersInRange = new HashSet<>();
             highResolutionTowerImageName = TowerName.TowerBH;
             this.level = level;
-            shootingEffect = ShootingEffect.getStoke(ShootingEffect.BlueWeek);
+            shootingEffect = ShootingEffect.getStoke(ShootingEffect.RedStrong);
             initTower();
 
             shootTimer = new Timer(500 - rateOfFire, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    isShooting = !isShooting;
+                    isShooting = true;
                     if(!crittersInRange.isEmpty()){
                         shoot();
                     }
@@ -49,7 +47,7 @@ public class IceTower extends Tower implements ShootingBehavior, DrawingShooting
                 towerName = TowerName.TowerB1;
                 range = 80;
                 rateOfFire = 200;
-                power = 20;
+                power = 2;
                 break;
             case 2:
                 buyPrice = 40.0;
@@ -92,18 +90,12 @@ public class IceTower extends Tower implements ShootingBehavior, DrawingShooting
         if(isShooting) { //if critter is get attacked(a line is drawn)
             int health = critterUnderAttack.getCurrentHealth();
             health -= power;
-            if(health > 0)
-                critterUnderAttack.setCurrentHealth(health);
-            else {
+            critterUnderAttack.setCurrentHealth(health);
+            if(health <= 0) {
                 crittersInRange.remove(critterUnderAttack);
                 critterUnderAttack = null;
             }
         }
-    }
-
-    @Override
-    public Set<Critter> getCrittersInRange() {
-        return crittersInRange;
     }
 
     @Override
@@ -113,6 +105,7 @@ public class IceTower extends Tower implements ShootingBehavior, DrawingShooting
         if(critterUnderAttack != null && isShooting){
             g2d.drawLine(positionX + CELL_SIZE / 2, positionY + CELL_SIZE / 2,
                     critterUnderAttack.getCurrentPosX() + CELL_SIZE / 2, critterUnderAttack.getCurrentPosY() + CELL_SIZE / 2);
+            isShooting = false;
         }
         g2d.dispose();
     }
