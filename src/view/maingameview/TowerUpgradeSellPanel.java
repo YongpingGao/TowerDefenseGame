@@ -1,6 +1,6 @@
 package view.maingameview;
 
-import Protocol.DrawingPanelDelegate;
+import protocol.DrawingPanelDelegate;
 import model.imagecollection.TowerImageCollection;
 import model.tower.Tower;
 
@@ -36,8 +36,13 @@ public class TowerUpgradeSellPanel extends JPanel implements DrawingPanelDelegat
 
     @Override
     public void reloadPanelBasedOnTower(Tower tower) {
-        this.tower = tower;
-        towerImageLabel.setIcon(new ImageIcon(TowerImageCollection.towerImages.get(tower.getHighReslutionTowerImageName())));
+        if(tower != null){
+            this.tower = tower;
+            towerImageLabel.setIcon(new ImageIcon(TowerImageCollection.towerImages.get(tower.getHighResolutionTowerImageName())));
+        } else {
+            towerImageLabel.setIcon(null);
+        }
+
     }
 
 

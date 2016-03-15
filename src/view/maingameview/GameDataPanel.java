@@ -1,81 +1,76 @@
 package view.maingameview;
 
+import protocol.DrawingDataPanelDelegate;
+import sun.jvm.hotspot.types.JBooleanField;
+
 import javax.swing.*;
 import java.awt.*;
 
 /**
  * Created by yongpinggao on 3/13/16.
  */
-public class GameDataPanel extends JPanel {
+public class GameDataPanel extends JPanel implements DrawingDataPanelDelegate{
+
+    public JButton TargetBasedOnWeakestButton;
+    public JButton TargetBasedOnStrongestButton;
+    public JButton TargetBasedOnNearestButton;
 
     public JLabel balanceLabel;
     public JLabel coinsLabel;
-    public JLabel warningLabel;
-    public JLabel waveStartLabel;
     public JLabel waveNumLabel;
+
+    public JLabel infoLabel;
+    public JButton waveStartButton;
     public JButton exitButton;
 
 
-    public GameDataPanel(){
-        setLayout(new GridBagLayout());
-        GridBagConstraints c = new GridBagConstraints();
+    public GameDataPanel() {
 
-        c.fill = GridBagConstraints.HORIZONTAL;
+        setLayout(new GridLayout(3,3));
+        TargetBasedOnWeakestButton = new JButton("TargetBasedOnWeakest");
+        TargetBasedOnStrongestButton = new JButton("TargetBasedOnStrongest");
+        TargetBasedOnNearestButton = new JButton("TargetBasedOnNearest");
+
         balanceLabel = new JLabel("balanceLabel");
-        c.weightx = 0.5;
-        c.gridx = 0;
-        c.gridy = 0;
-        c.insets = new Insets(10,10,0,0);
-        add(balanceLabel, c);
-
-
-        c.fill = GridBagConstraints.HORIZONTAL;
         coinsLabel = new JLabel("coinsLabel");
-        c.weightx = 0.5;
-        c.gridx = 1;
-        c.gridy = 0;
-        c.insets = new Insets(10,10,0,0);
-        add(coinsLabel, c);
+        waveNumLabel = new JLabel("Wave: ");
+
+        infoLabel = new JLabel("infoLabel");
+        waveStartButton = new JButton("Start Wave 1");
+        exitButton = new JButton("exitButton");
 
 
-        waveStartLabel = new JLabel("waveStartLabel");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 40;
-        c.weightx = 0.5;
-        c.gridwidth = 2;
-        c.gridx = 0;
-        c.gridy = 1;
-        c.insets = new Insets(10,10,0,0);
-        add(waveStartLabel, c);
+        add(TargetBasedOnWeakestButton);
+        add(TargetBasedOnStrongestButton);
+        add(TargetBasedOnNearestButton);
+        add(balanceLabel);
+        add(coinsLabel);
+        add(waveNumLabel);
+        add(infoLabel);
+        add(waveStartButton);
+        add(exitButton);
 
-        waveNumLabel = new JLabel("waveNumLabel");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 40;
-        c.weightx = 0.5;
-        c.gridwidth = 2;
-        c.gridx = 1;
-        c.gridy = 1;
-        c.insets = new Insets(10,10,0,0);
-        add(waveNumLabel, c);
 
-        warningLabel = new JLabel("warningLabel");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 0;
-        c.anchor = GridBagConstraints.PAGE_START;
-        c.insets = new Insets(10,0,0,0);  //top padding
-        c.gridx = 0;
-        c.gridwidth = 2;   //2 columns wide
-        c.gridy = 2;       //third row
-        c.insets = new Insets(10,10,0,0);
-        add(warningLabel, c);
-
-        exitButton = new JButton("Quit");
-        c.anchor = GridBagConstraints.PAGE_END;
-        c.insets = new Insets(0,0,0,10);  //top padding
-        c.gridx = 1;
-        c.gridwidth = 1;   //2 columns wide
-        c.gridy = 2;       //third row
-        add(exitButton, c);
     }
 
+    @Override
+    public void reloadWaveDataView(int waveNum) {
+        waveNumLabel.setText("Wave: " + waveNum + " now");
+        waveStartButton.setText("Start Wave " + (waveNum + 1));
+    }
+
+    @Override
+    public void reloadBalanceDataView(int balance) {
+
+    }
+
+    @Override
+    public void reloadCoinDataView(int coin) {
+
+    }
+
+    @Override
+    public void reloadInfoDataView(String info) {
+
+    }
 }

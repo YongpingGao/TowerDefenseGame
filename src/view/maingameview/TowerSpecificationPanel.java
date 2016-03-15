@@ -1,6 +1,6 @@
 package view.maingameview;
 
-import Protocol.DrawingPanelDelegate;
+import protocol.DrawingPanelDelegate;
 import model.tower.Tower;
 
 import javax.swing.*;
@@ -9,7 +9,7 @@ import java.awt.*;
 /**
  * Created by yongpinggao on 3/13/16.
  */
-public class TowerSpecificationPanel extends JPanel implements DrawingPanelDelegate{
+public class TowerSpecificationPanel extends JPanel implements DrawingPanelDelegate {
     public JLabel specificationLabel;
     public JLabel buyPriceLabel;
     public JLabel sellPriceLabel;
@@ -39,11 +39,21 @@ public class TowerSpecificationPanel extends JPanel implements DrawingPanelDeleg
 
     @Override
     public void reloadPanelBasedOnTower(Tower tower) {
-        specificationLabel.setText(tower.getSpecification());
-        buyPriceLabel.setText("Buy Price: " + tower.getBuyPrice()+"");
-        sellPriceLabel.setText("Sell Price: " + tower.getSellPrice() + "");
-        rangeLabel.setText("Shooting Range: " + tower.getRange());
-        powerLabel.setText("Shooting Power: " + tower.getPower());
-        rateOfFireLabel.setText("Shooting Rate: " + tower.getRateOfFire());
+        if (tower != null){
+            specificationLabel.setText(tower.getSpecification());
+            buyPriceLabel.setText("Buy Price: " + tower.getBuyPrice()+"");
+            sellPriceLabel.setText("Sell Price: " + tower.getSellPrice() + "");
+            rangeLabel.setText("Shooting Range: " + tower.getRange());
+            powerLabel.setText("Shooting Power: " + tower.getPower());
+            rateOfFireLabel.setText("Shooting Rate: " + tower.getRateOfFire());
+        } else {
+            specificationLabel.setText("");
+            buyPriceLabel.setText("");
+            sellPriceLabel.setText("");
+            rangeLabel.setText("");
+            powerLabel.setText("");
+            rateOfFireLabel.setText("");
+        }
+
     }
 }

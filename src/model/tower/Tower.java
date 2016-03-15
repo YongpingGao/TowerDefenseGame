@@ -1,32 +1,127 @@
 package model.tower;
 
+import model.critter.Critter;
+import model.drawing.Drawing;
+import model.map.GameMap;
+import model.tower.shootingstrategy.TargetBasedOnWeakest;
+import model.tower.shootingstrategy.TowerShootingStrategy;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.geom.Ellipse2D;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by yongpinggao on 3/13/16.
  */
-public class Tower {
+public class Tower implements ShootingBehavior{
 
     public final static int MAX_LEVEL = 3;
 
     int level;
-    TowerName towerName = TowerName.TowerNull;
-    TowerName highReslutionTowerImageName;
+    TowerName towerName;
+    TowerName highResolutionTowerImageName;
 
     // tower normal attributes
     double buyPrice;
     double sellPrice;
     String specification;
 
+    int positionX;
+    int positionY;
+
     // tower shooting attributes
     int range;
     int power;
     int rateOfFire;
+    boolean isShooting;
+    protected Set<Critter> crittersInRange;
+    protected Critter critterUnderAttack;
+    protected Timer shootTimer;
+    protected Ellipse2D towerRangeCircle;
 
-    public int getLevel() {
-        return level;
+    protected BasicStroke shootingEffect;
+
+    protected TowerShootingStrategy shootingStrategy;
+
+
+    public Tower(){
+
+        crittersInRange = new HashSet<>();
+        shootingEffect = new BasicStroke();
+        shootingStrategy = new TargetBasedOnWeakest();
+
+        shootTimer = new Timer(500 - rateOfFire, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                isShooting = !isShooting;
+                if(!crittersInRange.isEmpty()) shoot();
+                else critterUnderAttack = null;
+            }
+        });
+        shootTimer.start();
     }
 
-    public void setLevel(int level) {
-        this.level = level;
+    public boolean isShooting() {
+        return isShooting;
+    }
+
+    public void setShooting(boolean shooting) {
+        isShooting = shooting;
+    }
+
+    public Rectangle getBound(){
+        return towerRangeCircle.getBounds();
+    }
+
+    public void setPosition(int[] pos){
+        positionX = pos[0];
+        positionY = pos[1];
+        towerRangeCircle = new Ellipse2D.Float(positionX + Drawing.CELL_SIZE / 2 - range / 2, positionY + Drawing.CELL_SIZE  / 2 - range / 2, range, range);
+    }
+
+    public int getPositionX() {
+        return positionX;
+    }
+
+    public int getPositionY() {
+        return positionY;
+    }
+
+    public Ellipse2D getTowerRangeCircle() {
+        return towerRangeCircle;
+    }
+
+    public void setTowerRangeCircle(Ellipse2D towerRangeCircle) {
+        this.towerRangeCircle = towerRangeCircle;
+    }
+
+    public BasicStroke getShootingEffect() {
+        return shootingEffect;
+    }
+
+    public void setShootingEffect(BasicStroke shootingEffect) {
+        this.shootingEffect = shootingEffect;
+    }
+
+
+    public TowerShootingStrategy getShootingStrategy() {
+        return shootingStrategy;
+    }
+
+    public void setShootingStrategy(TowerShootingStrategy shootingStrategy) {
+        this.shootingStrategy = shootingStrategy;
+    }
+
+    public Critter getCritterUnderAttack() {
+        return critterUnderAttack;
+    }
+
+    public void setCritterUnderAttack(Critter critterUnderAttack) {
+        this.critterUnderAttack = critterUnderAttack;
     }
 
     public TowerName getTowerName() {
@@ -85,11 +180,26 @@ public class Tower {
         this.rateOfFire = rateOfFire;
     }
 
-    public TowerName getHighReslutionTowerImageName() {
-        return highReslutionTowerImageName;
+    public TowerName getHighResolutionTowerImageName() {
+        return highResolutionTowerImageName;
     }
 
-    public void setHighReslutionTowerImageName(TowerName highReslutionTowerImageName) {
-        this.highReslutionTowerImageName = highReslutionTowerImageName;
+    public void setHighResolutionTowerImageName(TowerName highResolutionTowerImageName) {
+        this.highResolutionTowerImageName = highResolutionTowerImageName;
     }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public Set<Critter> getCrittersInRange() {
+        return crittersInRange;
+    }
+
+    @Override
+    public void shoot() {}
 }

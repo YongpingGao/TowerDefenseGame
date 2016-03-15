@@ -1,9 +1,9 @@
 package view.mapeditorview;
 
 import model.map.GameMap;
-import Protocol.DrawingMapDelegate;
+import protocol.DrawingMapDelegate;
 import view.BaseWindowView;
-import view.Drawing;
+import model.drawing.GameMapDrawing;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,13 +31,13 @@ public class MapView extends JPanel {
 
         @Override
         public Dimension getPreferredSize() {
-            return new Dimension(Drawing.CELL_SIZE * map.getmCols(), Drawing.CELL_SIZE * map.getmRows());
+            return new Dimension(GameMapDrawing.CELL_SIZE * map.getmCols(), GameMapDrawing.CELL_SIZE * map.getmRows());
         }
 
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
-            Drawing.drawMap(g, map, this);
+            GameMapDrawing.drawMapAndTower(g, map, null, this);
         }
 
         @Override

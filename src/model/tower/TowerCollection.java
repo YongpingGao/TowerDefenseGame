@@ -1,9 +1,6 @@
 package model.tower;
 
-import model.map.GameMap;
-import utility.FileProcessing;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -29,4 +26,6 @@ public class TowerCollection {
     public void removeTowerAtIndex(int index){
         towers.remove(index);
     }
+
+
 }

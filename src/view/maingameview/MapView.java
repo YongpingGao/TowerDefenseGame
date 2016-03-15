@@ -1,10 +1,11 @@
 package view.maingameview;
 
-import Protocol.DrawingTowersDelegate;
+import protocol.DrawingMapInGameDelegate;
+import model.drawing.CritterDrawing;
+import model.drawing.ShootingEffectDrawing;
 import model.map.GameMap;
-import Protocol.DrawingMapDelegate;
 import model.tower.TowerCollection;
-import view.Drawing;
+import model.drawing.GameMapDrawing;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,14 +27,16 @@ public class MapView extends JPanel {
     }
 
 
-    public class MapPanel extends JPanel implements DrawingMapDelegate, DrawingTowersDelegate{
+    public class MapPanel extends JPanel implements DrawingMapInGameDelegate {
 
         private GameMap gameMap = new GameMap();
         private TowerCollection towerCollection = new TowerCollection();
 
+
+
         @Override
         public Dimension getPreferredSize() {
-            return new Dimension(Drawing.CELL_SIZE * gameMap.getmCols(), Drawing.CELL_SIZE * gameMap.getmRows());
+            return new Dimension(GameMapDrawing.CELL_SIZE * gameMap.getmCols(), GameMapDrawing.CELL_SIZE * gameMap.getmRows());
         }
 
         @Override
@@ -43,16 +46,33 @@ public class MapView extends JPanel {
         }
 
         @Override
-        public void refreshAllTowers(TowerCollection towerCollection) {
+        public void refreshMap(GameMap map, TowerCollection towerCollection) {
+            this.gameMap = map;
             this.towerCollection = towerCollection;
             repaint();
         }
 
         @Override
+        public void refreshCrittersInMap() {
+            repaint();
+        }
+
+        @Override
+        public void refreshShootingEffectInMap(TowerCollection towerCollection) {
+            this.towerCollection = towerCollection;
+            repaint();
+        }
+
+
+
+        @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
-            Drawing.drawMap(g, gameMap, this);
-            Drawing.drawTowers(g, towerCollection, gameMap, this);
+            GameMapDrawing.drawMapAndTower(g, gameMap, towerCollection, this);
+            CritterDrawing.drawCritters(g, this);
+            CritterDrawing.drawHealthBar(g);
+            GameMapDrawing.drawTowerRange(g, towerCollection, gameMap, this);
+            ShootingEffectDrawing.drawShootingEffect(g, towerCollection);
         }
 
 

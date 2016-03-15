@@ -6,6 +6,8 @@ import java.util.ArrayList;
  * Created by yongpinggao on 1/26/16.
  */
 public class GameMap {
+    // cell image size in pixels
+
 
     private ArrayList<CellState> cells;
     private int mCols;
@@ -87,6 +89,60 @@ public class GameMap {
             }
         }
     }
+
+    public void toggleChosenState(int index){
+
+        for(int i = 0; i < cells.size(); i++){
+            if(cells.get(i) == CellState.Chosen){
+                cells.set(i, CellState.Tower);
+            }
+        }
+        cells.set(index, CellState.Chosen);
+    }
+
+    public void clearState(){
+        // if the user press the wrong cells, aka path, etc.
+        // set state back to grass
+        for(int i = 0; i < cells.size(); i++){
+            if (cells.get(i) == CellState.Chosen){
+                cells.set(i, CellState.Tower);
+            } else if (cells.get(i) == CellState.ToPlaceTower){
+                cells.set(i, CellState.Grass);
+            }
+
+        }
+    }
+
+    public int findExitIndex(){
+        for(int i = 0; i < cells.size() ; i++){
+            if(cells.get(i) == CellState.Exit){ // Entrance -> indexEntrance
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public int findEntranceIndex(){
+        for(int i = 0; i < cells.size() ; i++){
+            if(cells.get(i) == CellState.Entrance){ // Entrance -> indexEntrance
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public ArrayList<Integer> findPathList(){
+        ArrayList<Integer> pathList = new ArrayList<>();
+        for(int i = 0; i < cells.size() ; i++){
+            if(cells.get(i) == CellState.Path){ // PATH -> pathList
+                pathList.add(i);
+            }
+        }
+        return pathList;
+
+    }
+
+
 
 
 }
