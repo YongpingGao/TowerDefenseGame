@@ -1,8 +1,8 @@
 package view.maingameview;
 
+import model.tower.Tower;
 import protocol.DrawingMapInGameDelegate;
 import model.drawing.CritterDrawing;
-import model.drawing.ShootingEffectDrawing;
 import model.map.GameMap;
 import model.tower.TowerCollection;
 import model.drawing.GameMapDrawing;
@@ -72,7 +72,8 @@ public class MapView extends JPanel {
             CritterDrawing.drawCritters(g, this);
             CritterDrawing.drawHealthBar(g);
             GameMapDrawing.drawTowerRange(g, towerCollection, gameMap, this);
-            ShootingEffectDrawing.drawShootingEffect(g, towerCollection);
+            towerCollection.drawShootingEffect(g);
+
         }
 
 

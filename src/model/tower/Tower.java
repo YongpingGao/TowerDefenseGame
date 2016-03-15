@@ -2,14 +2,10 @@ package model.tower;
 
 import model.critter.Critter;
 import model.drawing.Drawing;
-import model.map.GameMap;
-import model.tower.shootingstrategy.TargetBasedOnWeakest;
-import model.tower.shootingstrategy.TowerShootingStrategy;
+import model.tower.shootingstrategy.*;
 
-import javax.swing.*;
+
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,7 +13,7 @@ import java.util.Set;
 /**
  * Created by yongpinggao on 3/13/16.
  */
-public class Tower implements ShootingBehavior{
+public class Tower implements ShootingBehavior, DrawingShootingEffect{
 
     public final static int MAX_LEVEL = 3;
 
@@ -40,7 +36,7 @@ public class Tower implements ShootingBehavior{
     boolean isShooting;
     protected Set<Critter> crittersInRange;
     protected Critter critterUnderAttack;
-    protected Timer shootTimer;
+
     protected Ellipse2D towerRangeCircle;
 
     protected BasicStroke shootingEffect;
@@ -54,24 +50,9 @@ public class Tower implements ShootingBehavior{
         shootingEffect = new BasicStroke();
         shootingStrategy = new TargetBasedOnWeakest();
 
-        shootTimer = new Timer(500 - rateOfFire, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                isShooting = !isShooting;
-                if(!crittersInRange.isEmpty()) shoot();
-                else critterUnderAttack = null;
-            }
-        });
-        shootTimer.start();
+
     }
 
-    public boolean isShooting() {
-        return isShooting;
-    }
-
-    public void setShooting(boolean shooting) {
-        isShooting = shooting;
-    }
 
     public Rectangle getBound(){
         return towerRangeCircle.getBounds();
@@ -93,6 +74,14 @@ public class Tower implements ShootingBehavior{
 
     public Ellipse2D getTowerRangeCircle() {
         return towerRangeCircle;
+    }
+
+    public boolean isShooting() {
+        return isShooting;
+    }
+
+    public void setShooting(boolean shooting) {
+        isShooting = shooting;
     }
 
     public void setTowerRangeCircle(Ellipse2D towerRangeCircle) {
@@ -202,4 +191,7 @@ public class Tower implements ShootingBehavior{
 
     @Override
     public void shoot() {}
+
+    @Override
+    public void drawShootingEffect(Graphics g) {}
 }

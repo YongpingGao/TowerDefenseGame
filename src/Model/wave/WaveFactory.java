@@ -16,7 +16,7 @@ public class WaveFactory {
     public Wave getWave(int waveNum){
         switch (waveNum){
             case 1:
-                return new Wave.Builder().critterA(4).build();
+                return new Wave.Builder().critterA(10).build();
             default:
                 return null;
         }

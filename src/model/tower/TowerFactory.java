@@ -21,12 +21,12 @@ public class TowerFactory {
                 return new TowerA(2);
             case TowerA3:
                 return new TowerA(3);
-//            case TowerB1:
-//                return new TowerB(1);
-//            case TowerB2:
-//                return new TowerB(2);
-//            case TowerB3:
-//                return new TowerB(3);
+            case TowerB1:
+                return new IceTower(1);
+            case TowerB2:
+                return new IceTower(2);
+            case TowerB3:
+                return new IceTower(3);
 //            case TowerC1:
 //                return new TowerC(1);
 //            case TowerC2:

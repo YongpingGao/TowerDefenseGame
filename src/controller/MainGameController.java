@@ -243,6 +243,8 @@ public class MainGameController {
                 drawingMapInGameDelegate.refreshCrittersInMap();
                 detectingCrittersInRange();
                 drawingMapInGameDelegate.refreshShootingEffectInMap(towerCollection);
+
+
             }
         });
         paintingTimer.start();
@@ -263,11 +265,15 @@ public class MainGameController {
         for(Tower t: towerCollection.getTowers().values()){
             for(Critter c : CritterCollection.critters) {
                 if(c.isAlive()){
+                    if(c.getCurrentHealth() <= 0){
+                        c.setAlive(false);
+                    }
                     if(c.getBound().intersects(t.getBound())){
                         t.getCrittersInRange().add(c);
                     } else {
                         t.getCrittersInRange().remove(c);
                     }
+
                 }
             }
         }

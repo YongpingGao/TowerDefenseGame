@@ -1,6 +1,7 @@
 package model.tower;
 
 
+import java.awt.*;
 import java.util.HashMap;
 
 /**
@@ -28,4 +29,9 @@ public class TowerCollection {
     }
 
 
+    public void drawShootingEffect(Graphics g){
+        for (Tower t: towers.values()){
+            t.drawShootingEffect(g);
+        }
+    }
 }
