@@ -8,9 +8,7 @@ import model.critter.*;
  */
 public class Wave {
     private int index;
-    private final CritterA critterA;
     private Wave(Wave.Builder builder) {
-        critterA = builder.ca;
         index = 0;
     }
     public static class Builder {
@@ -21,6 +19,30 @@ public class Wave {
             for(int i = 0; i < num; ++i) {
                 CritterA critterA = new CritterA();
                 CritterCollection.addCritter(critterA);
+            }
+            return this;
+        }
+
+        public Wave.Builder critterB(int num) {
+            for(int i = 0; i < num; ++i) {
+                CritterB critterB = new CritterB();
+                CritterCollection.addCritter(critterB);
+            }
+            return this;
+        }
+
+        public Wave.Builder critterC(int num) {
+            for(int i = 0; i < num; ++i) {
+                CritterC critterC = new CritterC();
+                CritterCollection.addCritter(critterC);
+            }
+            return this;
+        }
+
+        public Wave.Builder critterD(int num) {
+            for(int i = 0; i < num; ++i) {
+                CritterD critterD = new CritterD();
+                CritterCollection.addCritter(critterD);
             }
             return this;
         }

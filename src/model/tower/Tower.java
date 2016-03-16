@@ -37,23 +37,15 @@ public class Tower implements ShootingBehavior, DrawingShootingEffect{
 
     protected Set<Critter> crittersInRange;
     protected Critter critterUnderAttack;
-
     protected Ellipse2D towerRangeCircle;
-
     protected BasicStroke shootingEffect;
-
     protected TowerShootingStrategy shootingStrategy;
 
-
-    public Tower(){
-
+    public Tower() {
         crittersInRange = new HashSet<>();
         shootingEffect = new BasicStroke();
         shootingStrategy = new TargetBasedOnWeakest();
-
-
     }
-
 
     public Rectangle getBound(){
         return towerRangeCircle.getBounds();

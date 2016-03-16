@@ -20,6 +20,7 @@ public class CritterCollection {
     }
 
     public static void clearAllCritters(){
+        currentIndex = 0;
         critters.removeAll(critters);
     }
 

@@ -24,10 +24,10 @@ public class IceTower extends Tower implements ShootingBehavior, DrawingShooting
             crittersInRange = new HashSet<>();
             highResolutionTowerImageName = TowerName.TowerBH;
             this.level = level;
-            shootingEffect = ShootingEffect.getStoke(ShootingEffect.RedStrong);
+            shootingEffect = ShootingEffect.getStoke(ShootingEffect.IceEffect);
             initTower();
 
-            shootTimer = new Timer(1000, new ActionListener() {
+            shootTimer = new Timer(1000 - rateOfFire, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                    powerOn = true;
@@ -56,7 +56,7 @@ public class IceTower extends Tower implements ShootingBehavior, DrawingShooting
                 sellPrice = 20.0;
                 towerName = TowerName.TowerB2;
                 range = 90;
-                rateOfFire = 1200;
+                rateOfFire = 20;
                 frozenTime = 1500;
                 power = 0;
                 break;
@@ -65,7 +65,7 @@ public class IceTower extends Tower implements ShootingBehavior, DrawingShooting
                 sellPrice = 25.0;
                 towerName = TowerName.TowerB3;
                 range = 100;
-                rateOfFire = 1300;
+                rateOfFire = 30;
                 frozenTime = 2000;
                 power = 0;
                 break;
@@ -112,6 +112,7 @@ public class IceTower extends Tower implements ShootingBehavior, DrawingShooting
         Graphics2D g2d = (Graphics2D) g.create();
         g2d.setStroke(this.getShootingEffect());
         if(critterUnderAttack != null && powerOn){
+            g2d.setColor(Color.WHITE);
             g2d.drawLine(positionX + CELL_SIZE / 2, positionY + CELL_SIZE / 2,
                     critterUnderAttack.getCurrentPosX() + CELL_SIZE / 2, critterUnderAttack.getCurrentPosY() + CELL_SIZE / 2);
         }

@@ -3,6 +3,7 @@ package model.drawing;
 /**
  * Created by yongpinggao on 3/15/16.
  */
+// Base class of Drawing
 public class Drawing {
     // input: coordinate(x,y)(pixels), cell size of a cell. And cols number
     // output: nth cell in whole map

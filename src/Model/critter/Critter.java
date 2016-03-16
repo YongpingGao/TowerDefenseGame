@@ -21,6 +21,7 @@ public class Critter implements ActionListener{
     protected int currentMoveSpeed;
     protected int initialMoveSpeed;
     protected boolean isAlive;
+    protected boolean isSucceed;
 
     protected Timer movingTimer;
     protected Timer innerTimer;
@@ -47,6 +48,22 @@ public class Critter implements ActionListener{
         nextIndex = entranceIndex;
     }
 
+    public ArrayList<Integer> getPathList() {
+        return pathList;
+    }
+
+    public void setPathList(ArrayList<Integer> pathList) {
+        this.pathList = pathList;
+    }
+
+    public boolean isSucceed() {
+        return isSucceed;
+    }
+
+    public void setSucceed(boolean succeed) {
+        isSucceed = succeed;
+    }
+
     public Timer getMovingTimer() {
         return movingTimer;
     }
@@ -70,8 +87,6 @@ public class Critter implements ActionListener{
     public void setInnerTimer(Timer innerTimer) {
         this.innerTimer = innerTimer;
     }
-
-
 
     public int getInitialMoveSpeed() {
         return initialMoveSpeed;
@@ -198,7 +213,10 @@ public class Critter implements ActionListener{
             nextIndex = getDestination(GameMapDrawing.coordinateToIndexConverter(x, y ,cols));
             if(nextIndex != -1) {
                 moveToIndex(nextIndex);
-            } else isAlive = false;
+            } else {
+                isAlive = false;
+                isSucceed = true;
+            }
         } else {
             if(currentPosY - y >= currentMoveSpeed){
                 moveUp();
@@ -209,7 +227,7 @@ public class Critter implements ActionListener{
             else if (currentPosX - x >= currentMoveSpeed){
                 moverLeft();
             }
-            else if (x -currentPosX >= currentMoveSpeed){
+            else if (x - currentPosX >= currentMoveSpeed){
                 moveRight();
             } else {
                 currentPosX = x;

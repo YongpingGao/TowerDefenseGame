@@ -10,8 +10,6 @@ import java.util.Set;
  */
 public class TargetBasedOnWeakest implements TowerShootingStrategy {
 
-
-
     @Override
     public Critter targetOnCritters(Set<Critter> crittersInRange) {
         if(crittersInRange.size() > 0){

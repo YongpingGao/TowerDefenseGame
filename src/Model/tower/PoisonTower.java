@@ -23,7 +23,7 @@ public class PoisonTower extends Tower implements ShootingBehavior, DrawingShoot
             crittersInRange = new HashSet<>();
             highResolutionTowerImageName = TowerName.TowerCH;
             this.level = level;
-            shootingEffect = ShootingEffect.getStoke(ShootingEffect.BlueWeek);
+            shootingEffect = ShootingEffect.getStoke(ShootingEffect.PoisonEffect);
             initTower();
             shootTimer = new Timer(1000 - rateOfFire, new ActionListener() {
                 @Override
@@ -54,7 +54,7 @@ public class PoisonTower extends Tower implements ShootingBehavior, DrawingShoot
                 sellPrice = 25.0;
                 towerName = TowerName.TowerC2;
                 range = 90;
-                rateOfFire = 1200;
+                rateOfFire = 20;
                 poisonTime = 3000;
                 slowDownMoveSpeed = 3;
                 continuesDamage = 4;
@@ -65,7 +65,7 @@ public class PoisonTower extends Tower implements ShootingBehavior, DrawingShoot
                 sellPrice = 30.0;
                 towerName = TowerName.TowerC3;
                 range = 100;
-                rateOfFire = 1300;
+                rateOfFire = 30;
                 poisonTime = 4000;
                 slowDownMoveSpeed = 4;
                 continuesDamage = 8;
@@ -120,6 +120,7 @@ public class PoisonTower extends Tower implements ShootingBehavior, DrawingShoot
         Graphics2D g2d = (Graphics2D) g.create();
         g2d.setStroke(this.getShootingEffect());
         if(critterUnderAttack != null && powerOn){
+            g2d.setColor(Color.RED);
             g2d.drawLine(positionX + CELL_SIZE / 2, positionY + CELL_SIZE / 2,
                     critterUnderAttack.getCurrentPosX() + CELL_SIZE / 2, critterUnderAttack.getCurrentPosY() + CELL_SIZE / 2);
         }

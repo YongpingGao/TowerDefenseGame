@@ -36,7 +36,7 @@ public class GameDataPanel extends JPanel implements DrawingDataPanelDelegate{
         waveNumLabel = new JLabel("Wave: ");
 
         infoLabel = new JLabel("infoLabel");
-        waveStartButton = new JButton("Start Wave 1");
+        waveStartButton = new JButton("Next Wave");
         exitButton = new JButton("exitButton");
 
 
@@ -56,7 +56,6 @@ public class GameDataPanel extends JPanel implements DrawingDataPanelDelegate{
     @Override
     public void reloadWaveDataView(int waveNum) {
         waveNumLabel.setText("Wave: " + waveNum + " now");
-        waveStartButton.setText("Start Wave " + (waveNum + 1));
     }
 
     @Override
@@ -66,7 +65,7 @@ public class GameDataPanel extends JPanel implements DrawingDataPanelDelegate{
 
     @Override
     public void reloadCoinDataView(int coin) {
-
+        coinsLabel.setText("Coin left: " + coin);
     }
 
     @Override

@@ -19,7 +19,7 @@ public class NormalTower extends Tower implements ShootingBehavior, DrawingShoot
             crittersInRange = new HashSet<>();
             highResolutionTowerImageName = TowerName.TowerAH;
             this.level = level;
-            shootingEffect = ShootingEffect.getStoke(ShootingEffect.BlackDot);
+            shootingEffect = ShootingEffect.getStoke(ShootingEffect.NormalEffect);
             initTower();
             shootTimer = new Timer(1000 - rateOfFire, new ActionListener() {
                 @Override

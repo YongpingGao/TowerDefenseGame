@@ -15,7 +15,6 @@ import model.tower.TowerName;
 import model.drawing.GameMapDrawing;
 import model.wave.WaveFactory;
 import view.maingameview.MainGameView;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,6 +35,9 @@ public class MainGameController {
     int currentIndex = -1;
     int currentWaveNum = 0;
 
+
+    Timer critterGeneratorTimer;
+
     DrawingMapInGameDelegate drawingMapInGameDelegate;
     DrawingPanelDelegate drawingSpecificationPanelDelegate;
     DrawingPanelDelegate drawingSellUpgradePanelDelegate;
@@ -43,6 +45,8 @@ public class MainGameController {
 
     private final int REFRESH_RATE = 100;
     private final int CRITTER_GENERATE_TIME = 1000;
+
+    private int coins = 10;
 
 
     public MainGameController(GameMap gameMap){
@@ -53,6 +57,7 @@ public class MainGameController {
         drawingSellUpgradePanelDelegate = mainGameView.endView.towerUpgradeSellPanel;
         drawingDataPanelDelegate = mainGameView.topView.gameDataPanel;
         drawingMapInGameDelegate.refreshMap(gameMap);
+        drawingDataPanelDelegate.reloadCoinDataView(coins);
 
         initPaintingTimers();
         initWaveTimers();
@@ -67,8 +72,12 @@ public class MainGameController {
         mainGameView.topView.gameDataPanel.waveStartButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(currentWaveNum == WaveFactory.MAX_WAVE_NUM) {
+                    currentWaveNum = 0;
+                }
                 initCrittersForWave(++currentWaveNum);
                 drawingDataPanelDelegate.reloadWaveDataView(currentWaveNum);
+                System.out.println(currentWaveNum);
             }
         });
 
@@ -100,9 +109,19 @@ public class MainGameController {
             }
         });
 
+        mainGameView.topView.gameDataPanel.exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearGame();
+                mainGameView.setVisible(false);
+                new MainMenuController().mainMenuView.setVisible(true);
+            }
+        });
+
     }
 
     private void initCrittersForWave(int waveNum) {
+        CritterCollection.clearAllCritters();
         WaveFactory.sharedInstance().getWave(waveNum);
         CritterCollection.setGameMapForCritters(gameMap);
     }
@@ -243,22 +262,33 @@ public class MainGameController {
                 drawingMapInGameDelegate.refreshCrittersInMap();
                 detectingCrittersInRange();
                 drawingMapInGameDelegate.refreshShootingEffectInMap(towerCollection);
-
+                detectingCrittersStoleCoins();
 
             }
         });
         paintingTimer.start();
     }
 
+    private void detectingCrittersStoleCoins() {
+        for(Critter c : CritterCollection.critters) {
+            if(c.isSucceed()){
+                coins --;
+                drawingDataPanelDelegate.reloadCoinDataView(coins);
+                if(coins == 0) gameOverHandler();
+                c.setSucceed(false);
+            }
+        }
+    }
+
     private void initWaveTimers(){
-        Timer waveTimer = new Timer(CRITTER_GENERATE_TIME, new ActionListener() {
+        critterGeneratorTimer = new Timer(CRITTER_GENERATE_TIME, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(CritterCollection.currentIndex < CritterCollection.critters.size())
                 CritterCollection.critters.get(CritterCollection.currentIndex++).setAlive(true);
             }
         });
-        waveTimer.start();
+        critterGeneratorTimer.start();
     }
 
     private void detectingCrittersInRange(){
@@ -279,5 +309,32 @@ public class MainGameController {
 
         }
     }
+
+    private void gameOverHandler(){
+        clearGame();
+        Object[] options = {"Back to main menu",  "Play again!"};
+        int n = JOptionPane.showOptionDialog(mainGameView,
+                "Sorry, Game over...",
+                "Oops!",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,     //do not use a custom Icon
+                options, //the titles of buttons
+                options[0]); //default button title
+        if(n == 0){
+            mainGameView.setVisible(false);
+            new MainMenuController().mainMenuView.setVisible(true);
+        } else {
+            mainGameView.setVisible(false);
+            new MapChooseController().mapChooseView.setVisible(true);
+        }
+    }
+
+    private void clearGame(){
+        CritterCollection.clearAllCritters();
+        critterGeneratorTimer.stop();
+    }
+    
+    
 
 }
