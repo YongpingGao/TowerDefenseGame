@@ -11,11 +11,13 @@ import java.util.HashSet;
 /**
  * Created by yongpinggao on 3/15/16.
  */
-// Freezing the critter for a time
+// Freezing the critter for a time (have a higher priority to poison tower)
 public class IceTower extends Tower implements ShootingBehavior, DrawingShootingEffect{
 
 
     protected Timer shootTimer;
+    int frozenTime;
+
 
     public IceTower(int level){
         if(level <= MAX_LEVEL) {
@@ -25,17 +27,16 @@ public class IceTower extends Tower implements ShootingBehavior, DrawingShooting
             shootingEffect = ShootingEffect.getStoke(ShootingEffect.RedStrong);
             initTower();
 
-            shootTimer = new Timer(500 - rateOfFire, new ActionListener() {
+            shootTimer = new Timer(1000, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    isShooting = true;
-                    if(!crittersInRange.isEmpty()){
-                        shoot();
-                    }
-                    else critterUnderAttack = null;
+                   powerOn = true;
+                    shoot();
                 }
             });
             shootTimer.start();
+
+
         }
     }
     private void initTower(){
@@ -46,24 +47,27 @@ public class IceTower extends Tower implements ShootingBehavior, DrawingShooting
                 sellPrice = 15.0;
                 towerName = TowerName.TowerB1;
                 range = 80;
-                rateOfFire = 200;
-                power = 2;
+                rateOfFire = 10;
+                power = 0;
+                frozenTime = 1000;
                 break;
             case 2:
                 buyPrice = 40.0;
                 sellPrice = 20.0;
                 towerName = TowerName.TowerB2;
                 range = 90;
-                rateOfFire = 300;
-                power = 30;
+                rateOfFire = 1200;
+                frozenTime = 1500;
+                power = 0;
                 break;
             case 3:
                 buyPrice = 50.0;
                 sellPrice = 25.0;
                 towerName = TowerName.TowerB3;
                 range = 100;
-                rateOfFire = 400;
-                power = 40;
+                rateOfFire = 1300;
+                frozenTime = 2000;
+                power = 0;
                 break;
             default:
                 towerName = TowerName.TowerNull;
@@ -87,26 +91,31 @@ public class IceTower extends Tower implements ShootingBehavior, DrawingShooting
     public void shoot() {
         super.shoot();
         critterUnderAttack = shootingStrategy.targetOnCritters(crittersInRange);
-        if(isShooting) { //if critter is get attacked(a line is drawn)
-            int health = critterUnderAttack.getCurrentHealth();
-            health -= power;
-            critterUnderAttack.setCurrentHealth(health);
-            if(health <= 0) {
+        if(powerOn && critterUnderAttack != null && critterUnderAttack.getCurrentMoveSpeed() != 0) { //if critter is attacked(a line is drawn)
+            critterUnderAttack.setCurrentMoveSpeed(0);
+
+            Timer freezeTimer = new Timer(frozenTime, critterUnderAttack);
+            freezeTimer.setInitialDelay(frozenTime);
+            freezeTimer.setRepeats(false);
+            critterUnderAttack.setMovingTimer(freezeTimer);
+            critterUnderAttack.getMovingTimer().start();
+
+            if(critterUnderAttack.getCurrentHealth() <= 0) {
                 crittersInRange.remove(critterUnderAttack);
                 critterUnderAttack = null;
             }
-        }
+        } else critterUnderAttack = null;
     }
 
     @Override
     public void drawShootingEffect(Graphics g) {
         Graphics2D g2d = (Graphics2D) g.create();
         g2d.setStroke(this.getShootingEffect());
-        if(critterUnderAttack != null && isShooting){
+        if(critterUnderAttack != null && powerOn){
             g2d.drawLine(positionX + CELL_SIZE / 2, positionY + CELL_SIZE / 2,
                     critterUnderAttack.getCurrentPosX() + CELL_SIZE / 2, critterUnderAttack.getCurrentPosY() + CELL_SIZE / 2);
-            isShooting = false;
         }
+        powerOn = false;
         g2d.dispose();
     }
 }

@@ -9,6 +9,5 @@ import java.awt.*;
  */
 public interface DrawingShootingEffect {
     int CELL_SIZE = Drawing.CELL_SIZE;
-
     void drawShootingEffect(Graphics g);
 }

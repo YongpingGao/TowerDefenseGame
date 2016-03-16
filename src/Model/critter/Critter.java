@@ -4,18 +4,27 @@ import model.imagecollection.CritterImageCollection;
 import model.map.GameMap;
 import model.drawing.GameMapDrawing;
 
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
  * Created by yongpinggao on 3/13/16.
  */
-public class Critter {
+public class Critter implements ActionListener{
     protected CritterName critterName;
     protected int currentHealth;
     protected int maxHealth;
     protected double worth;
+    protected int currentMoveSpeed;
+    protected int initialMoveSpeed;
     protected boolean isAlive;
+
+    protected Timer movingTimer;
+    protected Timer innerTimer;
+    protected int continuesDamage;
 
     // current position
     protected int currentPosX;
@@ -38,6 +47,40 @@ public class Critter {
         nextIndex = entranceIndex;
     }
 
+    public Timer getMovingTimer() {
+        return movingTimer;
+    }
+
+    public void setMovingTimer(Timer movingTimer) {
+        this.movingTimer = movingTimer;
+    }
+
+    public Timer getInnerTimer() {
+        return innerTimer;
+    }
+
+    public int getContinuesDamage() {
+        return continuesDamage;
+    }
+
+    public void setContinuesDamage(int continuesDamage) {
+        this.continuesDamage = continuesDamage;
+    }
+
+    public void setInnerTimer(Timer innerTimer) {
+        this.innerTimer = innerTimer;
+    }
+
+
+
+    public int getInitialMoveSpeed() {
+        return initialMoveSpeed;
+    }
+
+    public void setInitialMoveSpeed(int initialMoveSpeed) {
+        this.initialMoveSpeed = initialMoveSpeed;
+    }
+
     public Rectangle getBound(){
         Dimension dimension = CritterImageCollection.getCritterImageSizeOf(critterName);
         return new Rectangle(currentPosX, currentPosY, dimension.width, dimension.height);
@@ -45,6 +88,15 @@ public class Critter {
 
     public float getHealthBarLength() {
         return (float)(currentHealth) / maxHealth;
+    }
+
+    public int getCurrentMoveSpeed() {
+        return currentMoveSpeed;
+    }
+
+    public void setCurrentMoveSpeed(int currentMoveSpeed) {
+//        moveToIndex(getDestination(GameMapDrawing.coordinateToIndexConverter(currentPosX, currentPosY ,cols)));
+        this.currentMoveSpeed = currentMoveSpeed;
     }
 
     public CritterName getCritterName() {
@@ -63,23 +115,22 @@ public class Critter {
         isAlive = alive;
     }
 
-    protected int moveSpeed;
-
     // x, y -> current position
     private void moveRight(){
-        currentPosX += moveSpeed;
+        currentPosX += currentMoveSpeed;
     }
 
     private void moveDown(){
-        currentPosY += moveSpeed;
+        currentPosY += currentMoveSpeed;
+
     }
 
     private void moverLeft(){
-        currentPosX -= moveSpeed;
+        currentPosX -= currentMoveSpeed;
     }
 
     private void moveUp(){
-        currentPosY -= moveSpeed;
+        currentPosY -= currentMoveSpeed;
     }
 
     public int getCurrentPosX() {
@@ -137,34 +188,49 @@ public class Critter {
         return nextIndex;
     }
 
-
     // recursion make it consecutive
     private void moveToIndex(int index){
         int[] nextPosition = GameMapDrawing.indexToCoordinateConverter(index, cols);
         int x = nextPosition[0];
         int y = nextPosition[1];
-        if(currentPosY > y){
-            moveUp();
-        } else if (currentPosY < y){
-            moveDown();
-        } else if (currentPosX > x){
-            moverLeft();
-        } else if (currentPosX < x){
-            moveRight();
-        } else if (currentPosX == x && currentPosY == y){
+
+        if (currentPosX == x && currentPosY == y){
             nextIndex = getDestination(GameMapDrawing.coordinateToIndexConverter(x, y ,cols));
             if(nextIndex != -1) {
                 moveToIndex(nextIndex);
             } else isAlive = false;
+        } else {
+            if(currentPosY - y >= currentMoveSpeed){
+                moveUp();
+            }
+            else if (y - currentPosY >= currentMoveSpeed){
+                moveDown();
+            }
+            else if (currentPosX - x >= currentMoveSpeed){
+                moverLeft();
+            }
+            else if (x -currentPosX >= currentMoveSpeed){
+                moveRight();
+            } else {
+                currentPosX = x;
+                currentPosY = y;
+            }
         }
-
     }
 
     public void moveThroughPathInMap() {
         if(isAlive) moveToIndex(nextIndex);
     }
 
-
-
-
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getActionCommand() != null){ // critter get poisoned
+            if(e.getActionCommand().equals("POISON")){
+                currentHealth -= continuesDamage;
+            }
+        } else { // set back to initial speed of frozen state or low speed state
+            if(innerTimer != null) innerTimer.stop();
+            setCurrentMoveSpeed(initialMoveSpeed);
+        }
+    }
 }

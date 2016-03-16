@@ -1,6 +1,5 @@
 package model.tower;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,27 +10,22 @@ import java.util.HashSet;
  * Created by yongpinggao on 3/13/16.
  */
 
-public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEffect{
+public class NormalTower extends Tower implements ShootingBehavior, DrawingShootingEffect{
 
     protected Timer shootTimer;
 
-    public TowerA(int level){
+    public NormalTower(int level){
         if(level <= MAX_LEVEL) {
             crittersInRange = new HashSet<>();
             highResolutionTowerImageName = TowerName.TowerAH;
             this.level = level;
             shootingEffect = ShootingEffect.getStoke(ShootingEffect.BlackDot);
             initTower();
-
-            shootTimer = new Timer(500 - rateOfFire, new ActionListener() {
+            shootTimer = new Timer(1000 - rateOfFire, new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    isShooting = true;
-
-                    if(!crittersInRange.isEmpty()){
-                        shoot();
-                    }
-                    else critterUnderAttack = null;
+                    powerOn = true;
+                    shoot();
                 }
             });
             shootTimer.start();
@@ -39,7 +33,7 @@ public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEf
     }
 
     private void initTower(){
-        specification = "<html>" + "TowerA" + "<br> Level: " + level + "<br> Good at attack normal creature</html>";
+        specification = "<html>" + "Normal Tower" + "<br> Level: " + level + "<br> Good at attack normal creature</html>";
         switch(level){
             case 1:
                 buyPrice = 20.0;
@@ -47,7 +41,7 @@ public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEf
                 towerName = TowerName.TowerA1;
                 range = 80;
                 rateOfFire = 100;
-                power = 1;
+                power = 5;
                 break;
             case 2:
                 buyPrice = 30.0;
@@ -55,7 +49,7 @@ public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEf
                 towerName = TowerName.TowerA2;
                 range = 90;
                 rateOfFire = 200;
-                power = 20;
+                power = 10;
                 break;
             case 3:
                 buyPrice = 40.0;
@@ -63,7 +57,7 @@ public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEf
                 towerName = TowerName.TowerA3;
                 range = 100;
                 rateOfFire = 300;
-                power = 30;
+                power = 15;
                 break;
             default:
                 towerName = TowerName.TowerNull;
@@ -90,7 +84,7 @@ public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEf
     public void shoot() {
         super.shoot();
         critterUnderAttack = shootingStrategy.targetOnCritters(crittersInRange);
-        if(isShooting) { //if critter is get attacked(a line is drawn)
+        if(critterUnderAttack != null && powerOn) { //if critter is get attacked(a line is drawn)
             int health = critterUnderAttack.getCurrentHealth();
             health -= power;
             critterUnderAttack.setCurrentHealth(health);
@@ -98,6 +92,7 @@ public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEf
                 crittersInRange.remove(critterUnderAttack);
                 critterUnderAttack = null;
             }
+
         }
     }
 
@@ -105,10 +100,10 @@ public class TowerA extends Tower implements ShootingBehavior, DrawingShootingEf
     public void drawShootingEffect(Graphics g) {
         Graphics2D g2d = (Graphics2D) g.create();
         g2d.setStroke(this.getShootingEffect());
-        if(critterUnderAttack != null && isShooting){
+        if(critterUnderAttack != null && powerOn){
             g2d.drawLine(positionX + CELL_SIZE / 2, positionY + CELL_SIZE / 2,
                     critterUnderAttack.getCurrentPosX() + CELL_SIZE / 2, critterUnderAttack.getCurrentPosY() + CELL_SIZE / 2);
-            isShooting = false;
+            powerOn = false;
         }
         g2d.dispose();
     }

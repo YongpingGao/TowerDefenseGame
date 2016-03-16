@@ -25,6 +25,7 @@ public class Tower implements ShootingBehavior, DrawingShootingEffect{
     double buyPrice;
     double sellPrice;
     String specification;
+    boolean powerOn;
 
     int positionX;
     int positionY;
@@ -33,7 +34,7 @@ public class Tower implements ShootingBehavior, DrawingShootingEffect{
     int range;
     int power;
     int rateOfFire;
-    boolean isShooting;
+
     protected Set<Critter> crittersInRange;
     protected Critter critterUnderAttack;
 
@@ -76,13 +77,6 @@ public class Tower implements ShootingBehavior, DrawingShootingEffect{
         return towerRangeCircle;
     }
 
-    public boolean isShooting() {
-        return isShooting;
-    }
-
-    public void setShooting(boolean shooting) {
-        isShooting = shooting;
-    }
 
     public void setTowerRangeCircle(Ellipse2D towerRangeCircle) {
         this.towerRangeCircle = towerRangeCircle;

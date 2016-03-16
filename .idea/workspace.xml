@@ -2,7 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8e59cbb-50ba-42ac-b72f-62aac256f056" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/TowerA.java" afterPath="$PROJECT_DIR$/src/model/tower/TowerA.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/TowerA$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerA.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/model/tower/TowerA.java" afterPath="$PROJECT_DIR$/src/Model/tower/NormalTower.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/Critter.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/Critter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/CritterA.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/CritterA.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/IceTower$1.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/IceTower$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/IceTower.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/IceTower.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/PoisonTower.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/PoisonTower.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/wave/WaveFactory.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/wave/WaveFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/Tower.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/Tower.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory$1.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/critter/CritterA.java" afterPath="$PROJECT_DIR$/src/Model/critter/CritterA.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/tower/DrawingShootingEffect.java" afterPath="$PROJECT_DIR$/src/Model/tower/DrawingShootingEffect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/tower/IceTower.java" afterPath="$PROJECT_DIR$/src/Model/tower/IceTower.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/tower/PoisonTower.java" afterPath="$PROJECT_DIR$/src/Model/tower/PoisonTower.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/wave/WaveFactory.java" afterPath="$PROJECT_DIR$/src/Model/wave/WaveFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/MainGameController.java" afterPath="$PROJECT_DIR$/src/controller/MainGameController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/Tower.java" afterPath="$PROJECT_DIR$/src/model/tower/Tower.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/TowerFactory.java" afterPath="$PROJECT_DIR$/src/model/tower/TowerFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/TowerName.java" afterPath="$PROJECT_DIR$/src/model/tower/TowerName.java" />
     </list>
     <ignored path="TowerDefenseGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,60 +50,10 @@
         <entry file="file://$PROJECT_DIR$/src/model/tower/Tower.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="107" column="40" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="40" />
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2726#2727#0" expanded="true" />
-                <element signature="e#2768#2769#0" expanded="true" />
                 <element signature="method#setHighResolutionTowerImageName#0;class#Tower#0" expanded="false" />
-                <element signature="e#4144#4145#0" expanded="true" />
-                <element signature="e#4182#4183#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TowerA.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/tower/TowerA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6101469">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IceTower.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/tower/IceTower.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WaveFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/wave/WaveFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CritterDrawing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/drawing/CritterDrawing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,60 +63,41 @@
         <entry file="file://$PROJECT_DIR$/src/model/tower/TowerCollection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+              <caret line="31" column="23" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainGameController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/MainGameController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.25926">
-              <caret line="266" column="32" selection-start-line="266" selection-start-column="32" selection-end-line="266" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initTowerButtons#0;class#MainGameController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Critter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/critter/Critter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.222222">
-              <caret line="46" column="36" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1357#1358#0" expanded="true" />
-                <element signature="e#1414#1415#0" expanded="true" />
-                <element signature="e#2443#2444#0" expanded="true" />
-                <element signature="e#2479#2480#0" expanded="true" />
-                <element signature="method#getDestination#0;class#Critter#0" expanded="false" />
-                <element signature="method#moveToIndex#0;class#Critter#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/maingameview/MapView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.148149">
-              <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CritterA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/critter/CritterA.java">
+      <file leaf-file-name="TowerFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/tower/TowerFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="21" />
+              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Critter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/critter/Critter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5622933">
+              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5786#5787#0" expanded="true" />
+                <element signature="e#5836#5837#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TowerName.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/tower/TowerName.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -157,8 +110,8 @@
       <list>
         <option value="Singleton" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -178,10 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/model/critter/CritterName.java" />
-        <option value="$PROJECT_DIR$/src/view/Drawing.java" />
-        <option value="$PROJECT_DIR$/src/view/GameMapDrawing.java" />
-        <option value="$PROJECT_DIR$/src/model/critter/CritterA.java" />
         <option value="$PROJECT_DIR$/src/model/wave/Wave.java" />
         <option value="$PROJECT_DIR$/src/model/critter/CritterDrawing.java" />
         <option value="$PROJECT_DIR$/src/model/critter/CritterMoving.java" />
@@ -210,33 +159,37 @@
         <option value="$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnAllCritters.java" />
         <option value="$PROJECT_DIR$/src/model/tower/ShootingBehavior.java" />
         <option value="$PROJECT_DIR$/src/model/map/GameMap.java" />
-        <option value="$PROJECT_DIR$/src/model/critter/Critter.java" />
         <option value="$PROJECT_DIR$/src/model/drawing/GameMapDrawing.java" />
         <option value="$PROJECT_DIR$/src/view/maingameview/TowerSpecificationPanel.java" />
         <option value="$PROJECT_DIR$/src/protocol/DrawingDataPanelDelegate.java" />
         <option value="$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnStrongest.java" />
         <option value="$PROJECT_DIR$/src/view/maingameview/GameDataPanel.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/PoisonTower.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/TowerFactory.java" />
         <option value="$PROJECT_DIR$/src/model/drawing/ShootingEffectDrawing.java" />
         <option value="$PROJECT_DIR$/src/model/drawing/Drawing.java" />
         <option value="$PROJECT_DIR$/src/model/drawing/CritterDrawing.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/DrawingShootingEffect.java" />
         <option value="$PROJECT_DIR$/src/model/tower/TowerCollection.java" />
         <option value="$PROJECT_DIR$/src/view/maingameview/MapView.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/Tower.java" />
+        <option value="$PROJECT_DIR$/src/model/critter/CritterA.java" />
         <option value="$PROJECT_DIR$/src/controller/MainGameController.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/Tower.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/PoisionTower.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/TowerFactory.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/DrawingShootingEffect.java" />
         <option value="$PROJECT_DIR$/src/model/wave/WaveFactory.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/PoisonTower.java" />
         <option value="$PROJECT_DIR$/src/model/tower/IceTower.java" />
         <option value="$PROJECT_DIR$/src/model/tower/TowerA.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/NormalTower.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/TowerName.java" />
+        <option value="$PROJECT_DIR$/src/model/critter/Critter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1440" />
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1177" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1003,21 +956,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="23" width="1920" height="1177" extended-state="6" />
+    <frame x="1440" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32534564" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32513368" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25898618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3540107" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22310969" sideWeight="0.49527186" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25579977" sideWeight="0.49527186" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262032" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1048,7 +1001,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="31" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1057,16 +1010,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/maingameview/MapView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/BaseWindowView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1092,6 +1035,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5611247">
           <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1141,6 +1087,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1148,6 +1095,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="49" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1205,6 +1155,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,43 +1235,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/PoisonTower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/tower/ShootingBehavior.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/imagecollection/TowerImageCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="85" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1349,16 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/DrawingShootingEffect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/maingameview/MainGameView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1371,24 +1279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/maingameview/MapView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.148149">
-          <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1408,23 +1298,83 @@
     <entry file="file://$PROJECT_DIR$/src/model/critter/CritterA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="21" />
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/critter/Critter.java">
+    <entry file="file://$PROJECT_DIR$/src/view/maingameview/MapView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.222222">
-          <caret line="46" column="36" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="36" />
+        <state vertical-scroll-proportion="-9.259259">
+          <caret line="60" column="46" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1414#1415#0" expanded="true" />
-            <element signature="e#2443#2444#0" expanded="true" />
-            <element signature="e#2479#2480#0" expanded="true" />
-            <element signature="method#getDestination#0;class#Critter#0" expanded="false" />
-            <element signature="method#moveToIndex#0;class#Critter#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/DrawingShootingEffect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1874311">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/imagecollection/TowerImageCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/wave/WaveFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29988974">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MainGameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9801544">
+          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/IceTower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29988974">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/PoisonTower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.19955899">
+          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/NormalTower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65600884">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1432,53 +1382,46 @@
     <entry file="file://$PROJECT_DIR$/src/model/tower/Tower.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="107" column="40" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="40" />
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2726#2727#0" expanded="true" />
-            <element signature="e#2768#2769#0" expanded="true" />
             <element signature="method#setHighResolutionTowerImageName#0;class#Tower#0" expanded="false" />
-            <element signature="e#4144#4145#0" expanded="true" />
-            <element signature="e#4182#4183#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MainGameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.25926">
-          <caret line="266" column="32" selection-start-line="266" selection-start-column="32" selection-end-line="266" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initTowerButtons#0;class#MainGameController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/wave/WaveFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerCollection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/IceTower.java">
+    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerName.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerA.java">
+    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6101469">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/critter/Critter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5622933">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5786#5787#0" expanded="true" />
+            <element signature="e#5836#5837#0" expanded="true" />
           </folding>
         </state>
       </provider>

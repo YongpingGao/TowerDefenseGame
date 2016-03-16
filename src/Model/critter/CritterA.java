@@ -11,9 +11,10 @@ public class CritterA extends Critter {
 
     private void initCritter(){
         critterName = CritterName.CritterA;
-        moveSpeed = 5;
+        initialMoveSpeed = 5;
         maxHealth = 30;
         worth = 20;
         currentHealth = maxHealth;
+        currentMoveSpeed = initialMoveSpeed;
     }
 }
