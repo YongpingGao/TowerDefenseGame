@@ -19,6 +19,10 @@ public class CritterCollection {
         critters.add(critter);
     }
 
+    public static void removeCritter(Critter critter) {
+        critters.remove(critter);
+    }
+
     public static void clearAllCritters(){
         currentIndex = 0;
         critters.removeAll(critters);

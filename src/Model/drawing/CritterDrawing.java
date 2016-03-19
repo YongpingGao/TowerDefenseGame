@@ -15,7 +15,7 @@ public class CritterDrawing extends Drawing{
     public static void drawCritters(Graphics g, ImageObserver observer){
         Graphics2D g2d = (Graphics2D) g.create();
         for(Critter c : CritterCollection.critters){
-            if(c.isAlive()) {
+            if(c.isVisible()) {
                 g2d.drawImage(CritterImageCollection.critterImages.get(c.getCritterName()), c.getCurrentPosX(), c.getCurrentPosY(),observer);
             }
         }
@@ -25,7 +25,7 @@ public class CritterDrawing extends Drawing{
     public static  void drawHealthBar(Graphics g){
         Graphics2D g2d = (Graphics2D) g.create();
         for(Critter c : CritterCollection.critters){
-            if(c.isAlive()) {
+            if(c.isVisible()) {
                 if(c.getHealthBarLength() > 0.6){
                     g2d.setColor(Color.GREEN);
                 } else if (c.getHealthBarLength() > 0.3 && c.getHealthBarLength() < 0.6) {

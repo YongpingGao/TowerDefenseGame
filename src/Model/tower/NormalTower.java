@@ -10,7 +10,7 @@ import java.util.HashSet;
  * Created by yongpinggao on 3/13/16.
  */
 
-public class NormalTower extends Tower implements ShootingBehavior, DrawingShootingEffect{
+public class NormalTower extends Tower implements ShootingBehavior, DrawingShootingEffect {
 
     protected Timer shootTimer;
 
@@ -90,17 +90,15 @@ public class NormalTower extends Tower implements ShootingBehavior, DrawingShoot
             critterUnderAttack.setCurrentHealth(health);
             if(health <= 0) {
                 crittersInRange.remove(critterUnderAttack);
-                critterUnderAttack = null;
             }
-
-        }
+        } else critterUnderAttack = null;
     }
 
     @Override
     public void drawShootingEffect(Graphics g) {
         Graphics2D g2d = (Graphics2D) g.create();
         g2d.setStroke(this.getShootingEffect());
-        if(critterUnderAttack != null && powerOn){
+        if(critterUnderAttack != null && powerOn && !critterUnderAttack.isKilled()){
             g2d.drawLine(positionX + CELL_SIZE / 2, positionY + CELL_SIZE / 2,
                     critterUnderAttack.getCurrentPosX() + CELL_SIZE / 2, critterUnderAttack.getCurrentPosY() + CELL_SIZE / 2);
             powerOn = false;

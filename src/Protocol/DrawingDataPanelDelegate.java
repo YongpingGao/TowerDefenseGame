@@ -5,7 +5,7 @@ package protocol;
  */
 public interface DrawingDataPanelDelegate {
     void reloadWaveDataView (int waveNum);
-    void reloadBalanceDataView(int balance);
+    void reloadBalanceDataView(double balance);
     void reloadCoinDataView(int coin);
     void reloadInfoDataView(String info);
 }

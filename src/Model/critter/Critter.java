@@ -13,14 +13,15 @@ import java.util.ArrayList;
 /**
  * Created by yongpinggao on 3/13/16.
  */
-public class Critter implements ActionListener{
+public class Critter implements ActionListener {
     protected CritterName critterName;
     protected int currentHealth;
     protected int maxHealth;
     protected double worth;
     protected int currentMoveSpeed;
     protected int initialMoveSpeed;
-    protected boolean isAlive;
+    protected boolean isVisible;
+    protected boolean isKilled;
     protected boolean isSucceed;
 
     protected Timer movingTimer;
@@ -46,6 +47,23 @@ public class Critter implements ActionListener{
         currentPosX = currentPosition[0];
         currentPosY = currentPosition[1];
         nextIndex = entranceIndex;
+    }
+
+
+    public boolean isKilled() {
+        return isKilled;
+    }
+
+    public void setKilled(boolean killed) {
+        isKilled = killed;
+    }
+
+    public double getWorth() {
+        return worth;
+    }
+
+    public void setWorth(double worth) {
+        this.worth = worth;
     }
 
     public ArrayList<Integer> getPathList() {
@@ -122,12 +140,12 @@ public class Critter implements ActionListener{
         this.critterName = critterName;
     }
 
-    public boolean isAlive() {
-        return isAlive;
+    public boolean isVisible() {
+        return isVisible;
     }
 
-    public void setAlive(boolean alive) {
-        isAlive = alive;
+    public void setVisible(boolean visible) {
+        isVisible = visible;
     }
 
     // x, y -> current position
@@ -214,7 +232,7 @@ public class Critter implements ActionListener{
             if(nextIndex != -1) {
                 moveToIndex(nextIndex);
             } else {
-                isAlive = false;
+                isVisible = false;
                 isSucceed = true;
             }
         } else {
@@ -237,7 +255,7 @@ public class Critter implements ActionListener{
     }
 
     public void moveThroughPathInMap() {
-        if(isAlive) moveToIndex(nextIndex);
+        if(isVisible) moveToIndex(nextIndex);
     }
 
     @Override

@@ -20,6 +20,7 @@ public class MapChooseView extends BaseWindowView {
         startGameButton = new JButton("Start Game");
         editMapButton = new JButton("Edit the Map");
         list = new JList<>(listModel);
+        list.setSelectedIndex(0);
         pane = new JScrollPane(list);
 
         setLayout(new BorderLayout());

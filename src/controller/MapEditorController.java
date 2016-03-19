@@ -3,6 +3,7 @@ package controller;
 import model.map.CellState;
 import model.map.GameMap;
 import model.map.GameMapCollection;
+import model.map.mapvalidation.MapValidationManager;
 import protocol.DrawingMapDelegate;
 import model.drawing.GameMapDrawing;
 import view.mapeditorview.MapEditorView;
@@ -107,9 +108,12 @@ public class MapEditorController {
         mapEditorView.topView.saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(true){
-                    saveDataToFile();
-                } else{}
+                MapValidationManager manager = new MapValidationManager(gameMap);
+                if (manager.checkValidate()) {
+                     saveDataToFile();
+                } else {
+                    JOptionPane.showMessageDialog(mapEditorView, manager.getErrorMessage(), "Illegal Map", JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
 

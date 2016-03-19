@@ -14,6 +14,7 @@ import model.tower.TowerFactory;
 import model.tower.TowerName;
 import model.drawing.GameMapDrawing;
 import model.wave.WaveFactory;
+import model.bankaccount.*;
 import view.maingameview.MainGameView;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -34,7 +35,8 @@ public class MainGameController {
     Tower currentTower = new Tower();
     int currentIndex = -1;
     int currentWaveNum = 0;
-
+    BankAccount account;
+    TowerShootingStrategy currentStrategy = new TargetBasedOnWeakest();
 
     Timer critterGeneratorTimer;
 
@@ -59,12 +61,19 @@ public class MainGameController {
         drawingMapInGameDelegate.refreshMap(gameMap);
         drawingDataPanelDelegate.reloadCoinDataView(coins);
 
+        initBankAccount();
         initPaintingTimers();
         initWaveTimers();
         initTowerButtons();
         initMapArea();
         initSellUpgradeButtons();
         initFunctionalButtonsInTopPanel();
+    }
+
+    private void initBankAccount() {
+        account = new BankAccount();
+        account.setBalance(BankAccount.INITIAL_BALANCE);
+        drawingDataPanelDelegate.reloadBalanceDataView(account.getBalance());
     }
 
     private void initFunctionalButtonsInTopPanel() {
@@ -77,7 +86,6 @@ public class MainGameController {
                 }
                 initCrittersForWave(++currentWaveNum);
                 drawingDataPanelDelegate.reloadWaveDataView(currentWaveNum);
-                System.out.println(currentWaveNum);
             }
         });
 
@@ -85,6 +93,7 @@ public class MainGameController {
         mainGameView.topView.gameDataPanel.TargetBasedOnWeakestButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                currentStrategy = new TargetBasedOnStrongest();
                 for(Tower t : towerCollection.getTowers().values()){
                     t.setShootingStrategy(new TargetBasedOnWeakest());
                 }
@@ -94,8 +103,9 @@ public class MainGameController {
         mainGameView.topView.gameDataPanel.TargetBasedOnStrongestButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                currentStrategy = new TargetBasedOnStrongest();
                 for(Tower t : towerCollection.getTowers().values()){
-                    t.setShootingStrategy(new TargetBasedOnStrongest());
+                    t.setShootingStrategy(currentStrategy);
                 }
             }
         });
@@ -103,8 +113,9 @@ public class MainGameController {
         mainGameView.topView.gameDataPanel.TargetBasedOnNearestButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                currentStrategy = new TargetBasedOnNearest();
                 for(Tower t : towerCollection.getTowers().values()){
-                    t.setShootingStrategy(new TargetBasedOnNearest());
+                    t.setShootingStrategy(currentStrategy);
                 }
             }
         });
@@ -122,6 +133,9 @@ public class MainGameController {
 
     private void initCrittersForWave(int waveNum) {
         CritterCollection.clearAllCritters();
+        for(Tower t: towerCollection.getTowers().values()) {
+            t.getCrittersInRange().clear();
+        }
         WaveFactory.sharedInstance().getWave(waveNum);
         CritterCollection.setGameMapForCritters(gameMap);
     }
@@ -133,10 +147,19 @@ public class MainGameController {
                 if(currentTower != null){
                     int level = currentTower.getLevel();
                     if(level < Tower.MAX_LEVEL){
+                        double oldPrice = currentTower.getBuyPrice();
                         currentTower.setLevel(++level);
-                        refreshAllPanelsView();
+                        double newPrice = currentTower.getBuyPrice();
+                        if(newPrice - oldPrice > account.getBalance()) {
+                            drawingDataPanelDelegate.reloadInfoDataView("Need more gold");
+                            currentTower.setLevel(--level);
+                        } else {
+                            account.withDraw(newPrice - oldPrice);
+                            drawingDataPanelDelegate.reloadBalanceDataView(account.getBalance());
+                        }
+                        refreshGamePanelsView();
                     } else { // warning!
-
+                        drawingDataPanelDelegate.reloadInfoDataView("Max Level of tower is " + Tower.MAX_LEVEL);
                     }
                 }
             }
@@ -145,21 +168,24 @@ public class MainGameController {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(currentTower != null){
+                    account.deposit(currentTower.getSellPrice());
+                    drawingDataPanelDelegate.reloadBalanceDataView(account.getBalance());
                     currentTower = null;
                     towerCollection.removeTowerAtIndex(currentIndex);
                     gameMap.getCells().set(currentIndex, CellState.Grass);
                     currentIndex = -1;
-                    refreshAllPanelsView();
+                    refreshGamePanelsView();
                 }
             }
         });
     }
 
-    private void refreshAllPanelsView(){
+    private void refreshGamePanelsView(){
         drawingMapInGameDelegate.refreshMap(gameMap, towerCollection);
         drawingSpecificationPanelDelegate.reloadPanelBasedOnTower(currentTower);
         drawingSellUpgradePanelDelegate.reloadPanelBasedOnTower(currentTower);
     }
+
 
     private void initMapArea() {
         mainGameView.mapView.mapPanel.addMouseListener(new MouseAdapter() {
@@ -179,12 +205,15 @@ public class MainGameController {
 
                         // 1. if it is "toPlaceTower" state:  toPlaceTower -> Tower state
                         if(cellList.get(index) == CellState.ToPlaceTower){
+                            account.withDraw(currentTower.getBuyPrice());
+                            drawingDataPanelDelegate.reloadBalanceDataView(account.getBalance());
                             cellList.set(index, CellState.Tower);
                             Tower tower = TowerFactory.sharedInstance().getTower(currentTower.getTowerName());
+                            tower.setShootingStrategy(currentStrategy);
                             tower.setPosition(GameMapDrawing.indexToCoordinateConverter(index, gameMap.getmCols()));
                             towerCollection.addTowerAtIndex(index, tower);
                             gameMap.setToGrassState();
-                            refreshAllPanelsView();
+                            refreshGamePanelsView();
                             System.out.println("1");
                         }
                         // 2. if it is "Tower" state:  Tower state -> Chosen state
@@ -193,7 +222,7 @@ public class MainGameController {
                             gameMap.toggleChosenState(index);
                             currentTower = towerCollection.getTowers().get(index);
                             currentIndex = index;
-                            refreshAllPanelsView();
+                            refreshGamePanelsView();
                             System.out.println("2");
                         }
                         // 3. if it is "Chosen" state: Chosen state -> Tower State
@@ -201,7 +230,7 @@ public class MainGameController {
                             cellList.set(index, CellState.Tower);
                             currentTower = null;
                             currentIndex = -1;
-                            refreshAllPanelsView();
+                            refreshGamePanelsView();
                             System.out.println("3");
                         }
                         // 4. Other Cells: Chosen state -> Tower state.
@@ -212,7 +241,7 @@ public class MainGameController {
                             gameMap.clearState();
                             currentTower = null;
                             currentIndex = -1;
-                            refreshAllPanelsView();
+                            refreshGamePanelsView();
                             System.out.println("4");
                         }
                     }
@@ -226,30 +255,46 @@ public class MainGameController {
         mainGameView.topView.towerSelectionPanel.towerAButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                gameMap.setToPlaceTowerState();
                 currentTower = TowerFactory.sharedInstance().getTower(TowerName.TowerA1);
-
-                refreshAllPanelsView();
+                currentTower.setShootingStrategy(currentStrategy);
+                if(currentTower.getBuyPrice() <= account.getBalance()){
+                    gameMap.setToPlaceTowerState();
+                    refreshGamePanelsView();
+                } else {
+                    gameMap.setToGrassState();
+                    currentTower = null;
+                    drawingDataPanelDelegate.reloadInfoDataView("Need more gold");
+                }
             }
         });
         mainGameView.topView.towerSelectionPanel.towerBButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                gameMap.setToPlaceTowerState();
                 currentTower = TowerFactory.sharedInstance().getTower(TowerName.TowerB1);
-
-                refreshAllPanelsView();
+                currentTower.setShootingStrategy(currentStrategy);
+                if(currentTower.getBuyPrice() <= account.getBalance()){
+                    gameMap.setToPlaceTowerState();
+                    refreshGamePanelsView();
+                } else {
+                    gameMap.setToGrassState();
+                    currentTower = null;
+                    drawingDataPanelDelegate.reloadInfoDataView("Need more gold");
+                }
             }
         });
         mainGameView.topView.towerSelectionPanel.towerCButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                gameMap.setToPlaceTowerState();
                 currentTower = TowerFactory.sharedInstance().getTower(TowerName.TowerC1);
-
-                refreshAllPanelsView();
+                currentTower.setShootingStrategy(currentStrategy);
+                if(currentTower.getBuyPrice() <= account.getBalance()){
+                    gameMap.setToPlaceTowerState();
+                    refreshGamePanelsView();
+                } else {
+                    gameMap.setToGrassState();
+                    currentTower = null;
+                    drawingDataPanelDelegate.reloadInfoDataView("Need more gold");
+                }
             }
         });
     }
@@ -285,7 +330,7 @@ public class MainGameController {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(CritterCollection.currentIndex < CritterCollection.critters.size())
-                CritterCollection.critters.get(CritterCollection.currentIndex++).setAlive(true);
+                CritterCollection.critters.get(CritterCollection.currentIndex++).setVisible(true);
             }
         });
         critterGeneratorTimer.start();
@@ -294,19 +339,20 @@ public class MainGameController {
     private void detectingCrittersInRange(){
         for(Tower t: towerCollection.getTowers().values()){
             for(Critter c : CritterCollection.critters) {
-                if(c.isAlive()){
-                    if(c.getCurrentHealth() <= 0){
-                        c.setAlive(false);
-                    }
+                if(c.isVisible()){
                     if(c.getBound().intersects(t.getBound())){
                         t.getCrittersInRange().add(c);
                     } else {
                         t.getCrittersInRange().remove(c);
                     }
-
+                    if(c.getCurrentHealth() <= 0){
+                        c.setKilled(true);
+                        account.deposit(c.getWorth());
+                        drawingDataPanelDelegate.reloadBalanceDataView(account.getBalance());
+                        c.setVisible(false);
+                    }
                 }
             }
-
         }
     }
 

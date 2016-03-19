@@ -25,6 +25,7 @@ public class MapChooseController {
             listModel.addElement(mapCollection.getMaps().get(i).getImageName());
         }
 
+
         mapChooseView = new MapChooseView(listModel);
         mapChooseView.startGameButton.addActionListener(new ActionListener() {
             @Override

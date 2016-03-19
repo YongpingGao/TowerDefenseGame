@@ -44,7 +44,7 @@ public class Tower implements ShootingBehavior, DrawingShootingEffect{
     public Tower() {
         crittersInRange = new HashSet<>();
         shootingEffect = new BasicStroke();
-        shootingStrategy = new TargetBasedOnWeakest();
+//        shootingStrategy = new TargetBasedOnWeakest();
     }
 
     public Rectangle getBound(){

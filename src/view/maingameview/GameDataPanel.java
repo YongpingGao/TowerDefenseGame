@@ -59,9 +59,10 @@ public class GameDataPanel extends JPanel implements DrawingDataPanelDelegate{
     }
 
     @Override
-    public void reloadBalanceDataView(int balance) {
-
+    public void reloadBalanceDataView(double balance) {
+        balanceLabel.setText("Gold: " + balance);
     }
+
 
     @Override
     public void reloadCoinDataView(int coin) {
@@ -70,6 +71,6 @@ public class GameDataPanel extends JPanel implements DrawingDataPanelDelegate{
 
     @Override
     public void reloadInfoDataView(String info) {
-
+        infoLabel.setText(info);
     }
 }
