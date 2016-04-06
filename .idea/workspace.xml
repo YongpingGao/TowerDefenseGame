@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8e59cbb-50ba-42ac-b72f-62aac256f056" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/gamelog/Log.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/gamelog/LogType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/gamelog/LoggerCollection.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$1.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$2.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$3.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$4.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$5.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$6.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$7.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$8.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$9.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerCollection.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerCollection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/GameDataPanel.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/GameDataPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/TowerUpgradeSellPanel.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/TowerUpgradeSellPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/MainGameController.java" afterPath="$PROJECT_DIR$/src/controller/MainGameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/Tower.java" afterPath="$PROJECT_DIR$/src/model/tower/Tower.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/TowerCollection.java" afterPath="$PROJECT_DIR$/src/model/tower/TowerCollection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/maingameview/GameDataPanel.java" afterPath="$PROJECT_DIR$/src/view/maingameview/GameDataPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/maingameview/TowerUpgradeSellPanel.java" afterPath="$PROJECT_DIR$/src/view/maingameview/TowerUpgradeSellPanel.java" />
-    </list>
+    <list default="true" id="a8e59cbb-50ba-42ac-b72f-62aac256f056" name="Default" comment="" />
     <ignored path="TowerDefenseGame.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
