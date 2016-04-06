@@ -5,7 +5,7 @@ import model.map.GameMap;
 import model.map.GameMapCollection;
 import model.map.mapvalidation.MapValidationManager;
 import protocol.DrawingMapDelegate;
-import model.drawing.GameMapDrawing;
+import view.map.GameMapDrawing;
 import view.mapeditorview.MapEditorView;
 import utility.Helper;
 import view.mapeditorview.PopupMenuView;

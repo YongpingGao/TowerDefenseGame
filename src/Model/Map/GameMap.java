@@ -134,7 +134,7 @@ public class GameMap {
     public ArrayList<Integer> findPathList(){
         ArrayList<Integer> pathList = new ArrayList<>();
         for(int i = 0; i < cells.size() ; i++){
-            if(cells.get(i) == CellState.Path){ // PATH -> pathList
+            if(cells.get(i) == CellState.Path || cells.get(i) == CellState.Exit){ // PATH -> pathList
                 pathList.add(i);
             }
         }

@@ -7,4 +7,5 @@ import model.tower.Tower;
  */
 public interface DrawingPanelDelegate {
     void reloadPanelBasedOnTower(Tower tower);
+    void reloadLogPanelBasedOnIndexOfTower(int index);
 }

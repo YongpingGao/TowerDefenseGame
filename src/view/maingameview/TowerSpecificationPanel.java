@@ -44,8 +44,8 @@ public class TowerSpecificationPanel extends JPanel implements DrawingPanelDeleg
             buyPriceLabel.setText("Buy Price: " + tower.getBuyPrice()+"");
             sellPriceLabel.setText("Sell Price: " + tower.getSellPrice() + "");
             rangeLabel.setText("Shooting Range: " + tower.getRange());
-            powerLabel.setText("Shooting Power: " + tower.getPower());
-            rateOfFireLabel.setText("Shooting Rate: " + tower.getRateOfFire());
+            powerLabel.setText("Shooting Power: " + tower.getTowerShootingBehavior().getPower());
+            rateOfFireLabel.setText("Shooting Rate: " + tower.getTowerShootingBehavior().getRateOfFire());
         } else {
             specificationLabel.setText("");
             buyPriceLabel.setText("");
@@ -56,4 +56,7 @@ public class TowerSpecificationPanel extends JPanel implements DrawingPanelDeleg
         }
 
     }
+
+    @Override
+    public void reloadLogPanelBasedOnIndexOfTower(int index) {}
 }

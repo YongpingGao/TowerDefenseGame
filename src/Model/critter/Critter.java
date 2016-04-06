@@ -1,54 +1,92 @@
 package model.critter;
 
-import model.imagecollection.CritterImageCollection;
-import model.map.GameMap;
-import model.drawing.GameMapDrawing;
-
+import view.critter.CritterType;
+import view.critter.CritterView;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
+
 
 /**
  * Created by yongpinggao on 3/13/16.
  */
-public class Critter implements ActionListener {
-    protected CritterName critterName;
-    protected int currentHealth;
-    protected int maxHealth;
-    protected double worth;
-    protected int currentMoveSpeed;
-    protected int initialMoveSpeed;
-    protected boolean isVisible;
-    protected boolean isKilled;
-    protected boolean isSucceed;
+public class Critter implements ActionListener{
 
-    protected Timer movingTimer;
-    protected Timer innerTimer;
-    protected int continuesDamage;
+    private CritterType critterType;
+    private CritterView critterView;
+    private CritterMovingBehavior movingBehavior;
+    private int currentHealth;
+    private int maxHealth;
+    private double worth;
+    private int movingSpeed;
 
-    // current position
-    protected int currentPosX;
-    protected int currentPosY;
+    private int damage;
+    private Timer innerTimer;
+    private Timer specicalEffectTimer = new Timer(0, this);
 
-    private int nextIndex;
-    private int cols;
-    private ArrayList<Integer> pathList;
-    private int entranceIndex;
-    private int exitIndex;
+    private boolean isVisible;
+    private boolean isKilled;
+    private boolean isDonated;
 
-    public void setGameMap(GameMap gameMap) {
-        pathList = gameMap.findPathList();
-        cols = gameMap.getmCols();
-        entranceIndex = gameMap.findEntranceIndex();
-        exitIndex = gameMap.findExitIndex();
-        int[] currentPosition = GameMapDrawing.indexToCoordinateConverter(entranceIndex, cols);
-        currentPosX = currentPosition[0];
-        currentPosY = currentPosition[1];
-        nextIndex = entranceIndex;
+
+    public boolean isDonated() {
+        return isDonated;
     }
 
+    public void setDonated(boolean donated) {
+        isDonated = donated;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+
+    public Critter(CritterType critterType) {
+        this.critterType = critterType;
+        this.critterView = new CritterView(critterType);
+
+        switch (critterType) {
+            case CritterA:
+                initCritterA();
+                break;
+            case CritterB:
+                initCritterB();
+                break;
+            case CritterC:
+                initCritterC();
+                break;
+            case CritterD:
+                initCritterD();
+        }
+    }
+
+    private void initCritterA() {
+        maxHealth = 100;
+        currentHealth = maxHealth;
+        worth = 20;
+        movingSpeed = 20;
+    }
+
+    private void initCritterB() {
+        maxHealth = 60;
+        currentHealth = maxHealth;
+        worth = 30;
+        movingSpeed = 40;
+    }
+
+    private void initCritterC() {
+        maxHealth = 200;
+        currentHealth = maxHealth;
+        worth = 40;
+        movingSpeed = 10;
+    }
+
+    private void initCritterD() {
+        maxHealth = 400;
+        currentHealth = maxHealth;
+        worth = 50;
+        movingSpeed = 10;
+    }
 
     public boolean isKilled() {
         return isKilled;
@@ -56,130 +94,33 @@ public class Critter implements ActionListener {
 
     public void setKilled(boolean killed) {
         isKilled = killed;
+        if(killed) {
+            movingBehavior.getMovingTimer().stop();
+        }
     }
 
     public double getWorth() {
         return worth;
     }
 
-    public void setWorth(double worth) {
-        this.worth = worth;
-    }
-
-    public ArrayList<Integer> getPathList() {
-        return pathList;
-    }
-
-    public void setPathList(ArrayList<Integer> pathList) {
-        this.pathList = pathList;
-    }
-
-    public boolean isSucceed() {
-        return isSucceed;
-    }
-
-    public void setSucceed(boolean succeed) {
-        isSucceed = succeed;
-    }
-
-    public Timer getMovingTimer() {
-        return movingTimer;
-    }
-
-    public void setMovingTimer(Timer movingTimer) {
-        this.movingTimer = movingTimer;
-    }
-
-    public Timer getInnerTimer() {
-        return innerTimer;
-    }
-
-    public int getContinuesDamage() {
-        return continuesDamage;
-    }
-
-    public void setContinuesDamage(int continuesDamage) {
-        this.continuesDamage = continuesDamage;
-    }
-
-    public void setInnerTimer(Timer innerTimer) {
-        this.innerTimer = innerTimer;
-    }
-
-    public int getInitialMoveSpeed() {
-        return initialMoveSpeed;
-    }
-
-    public void setInitialMoveSpeed(int initialMoveSpeed) {
-        this.initialMoveSpeed = initialMoveSpeed;
-    }
-
-    public Rectangle getBound(){
-        Dimension dimension = CritterImageCollection.getCritterImageSizeOf(critterName);
-        return new Rectangle(currentPosX, currentPosY, dimension.width, dimension.height);
-    }
-
     public float getHealthBarLength() {
         return (float)(currentHealth) / maxHealth;
     }
 
-    public int getCurrentMoveSpeed() {
-        return currentMoveSpeed;
+    public CritterMovingBehavior getMovingBehavior() {
+        return movingBehavior;
     }
 
-    public void setCurrentMoveSpeed(int currentMoveSpeed) {
-//        moveToIndex(getDestination(GameMapDrawing.coordinateToIndexConverter(currentPosX, currentPosY ,cols)));
-        this.currentMoveSpeed = currentMoveSpeed;
+    public void setMovingBehavior(CritterMovingBehavior movingBehavior) {
+        this.movingBehavior = movingBehavior;
     }
 
-    public CritterName getCritterName() {
-        return critterName;
+    public int getMovingSpeed() {
+        return movingSpeed;
     }
 
-    public void setCritterName(CritterName critterName) {
-        this.critterName = critterName;
-    }
-
-    public boolean isVisible() {
-        return isVisible;
-    }
-
-    public void setVisible(boolean visible) {
-        isVisible = visible;
-    }
-
-    // x, y -> current position
-    private void moveRight(){
-        currentPosX += currentMoveSpeed;
-    }
-
-    private void moveDown(){
-        currentPosY += currentMoveSpeed;
-
-    }
-
-    private void moverLeft(){
-        currentPosX -= currentMoveSpeed;
-    }
-
-    private void moveUp(){
-        currentPosY -= currentMoveSpeed;
-    }
-
-    public int getCurrentPosX() {
-        return currentPosX;
-    }
-
-    public void setCurrentPosX(int currentPosX) {
-        this.currentPosX = currentPosX;
-    }
-
-    public int getCurrentPosY() {
-        return currentPosY;
-    }
-
-    public void setCurrentPosY(int currentPosY) {
-        this.currentPosY = currentPosY;
+    public void setMovingSpeed(int movingSpeed) {
+        this.movingSpeed = movingSpeed;
     }
 
     public int getCurrentHealth() {
@@ -190,83 +131,48 @@ public class Critter implements ActionListener {
         this.currentHealth = currentHealth;
     }
 
-    public int getMaxHealth() {
-        return maxHealth;
+    public boolean isVisible() {
+        return isVisible;
     }
 
-    public void setMaxHealth(int maxHealth) {
-        this.maxHealth = maxHealth;
+    public void setVisible(boolean visible) {
+        isVisible = visible;
     }
 
-    private int getDestination(int index) {
-
-        int iLeft = index - 1;
-        int iRight = index + 1;
-        int iDown = index + cols;
-        int iUp = index - cols;
-        // TODO when critter gone, it should stop
-        int nextIndex;
-        if (pathList.contains(iLeft)) {
-            nextIndex = iLeft;
-        } else if (pathList.contains(iRight)) {
-            nextIndex = iRight;
-        } else if (pathList.contains(iDown)) {
-            nextIndex = iDown;
-        } else if (pathList.contains(iUp)) {
-            nextIndex = iUp;
-        } else {
-            return -1;
-        }
-        pathList.remove(new Integer(index));
-        return nextIndex;
+    public CritterView getCritterView() {
+        return critterView;
     }
 
-    // recursion make it consecutive
-    private void moveToIndex(int index){
-        int[] nextPosition = GameMapDrawing.indexToCoordinateConverter(index, cols);
-        int x = nextPosition[0];
-        int y = nextPosition[1];
-
-        if (currentPosX == x && currentPosY == y){
-            nextIndex = getDestination(GameMapDrawing.coordinateToIndexConverter(x, y ,cols));
-            if(nextIndex != -1) {
-                moveToIndex(nextIndex);
-            } else {
-                isVisible = false;
-                isSucceed = true;
-            }
-        } else {
-            if(currentPosY - y >= currentMoveSpeed){
-                moveUp();
-            }
-            else if (y - currentPosY >= currentMoveSpeed){
-                moveDown();
-            }
-            else if (currentPosX - x >= currentMoveSpeed){
-                moverLeft();
-            }
-            else if (x - currentPosX >= currentMoveSpeed){
-                moveRight();
-            } else {
-                currentPosX = x;
-                currentPosY = y;
-            }
-        }
+    public Timer getInnerTimer() {
+        return innerTimer;
     }
 
-    public void moveThroughPathInMap() {
-        if(isVisible) moveToIndex(nextIndex);
+    public void setInnerTimer(Timer innerTimer) {
+        this.innerTimer = innerTimer;
+    }
+
+    public Timer getSpecicalEffectTimer() {
+        return specicalEffectTimer;
+    }
+
+    public void setSpecicalEffectTimer(Timer specicalEffectTimer) {
+        this.specicalEffectTimer = specicalEffectTimer;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getActionCommand() != null){ // critter get poisoned
-            if(e.getActionCommand().equals("POISON")){
-                currentHealth -= continuesDamage;
+        if(e.getActionCommand() != null) {
+            if(e.getActionCommand().equals("ICE_TOWER")) {
+                movingBehavior.getMovingTimer().start();
+                specicalEffectTimer.stop();
             }
-        } else { // set back to initial speed of frozen state or low speed state
-            if(innerTimer != null) innerTimer.stop();
-            setCurrentMoveSpeed(initialMoveSpeed);
+            if(e.getActionCommand().equals("BURNING_TOWER")) {
+                specicalEffectTimer.stop();
+                innerTimer.stop();
+            }
+        } else {
+            currentHealth -= damage;
         }
     }
 }
+

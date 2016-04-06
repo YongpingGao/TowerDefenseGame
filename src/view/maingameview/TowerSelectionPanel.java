@@ -1,7 +1,7 @@
 package view.maingameview;
 
-import model.imagecollection.TowerImageCollection;
-import model.tower.TowerName;
+import model.tower.TowerFactory;
+import view.tower.TowerType;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,9 +16,9 @@ public class TowerSelectionPanel extends JPanel{
     public JButton towerCButton;
 
     public TowerSelectionPanel(){
-        towerAButton = new JButton(new ImageIcon(TowerImageCollection.towerImages.get(TowerName.TowerAH)));
-        towerBButton = new JButton(new ImageIcon(TowerImageCollection.towerImages.get(TowerName.TowerBH)));
-        towerCButton = new JButton(new ImageIcon(TowerImageCollection.towerImages.get(TowerName.TowerCH)));
+        towerAButton = new JButton(new ImageIcon(TowerFactory.sharedInstance().getTower(TowerType.BurningTower1).getHdImageName()));
+        towerBButton = new JButton(new ImageIcon(TowerFactory.sharedInstance().getTower(TowerType.IceTower1).getHdImageName()));
+        towerCButton = new JButton(new ImageIcon(TowerFactory.sharedInstance().getTower(TowerType.SplashTower1).getHdImageName()));
         setLayout(new GridLayout(1,3));
         setBackground(Color.blue);
         add(towerAButton);

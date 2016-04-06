@@ -16,7 +16,7 @@ public class TargetBasedOnNearest implements TowerShootingStrategy {
             Critter nearestCritter = iterator.next();
             while(iterator.hasNext()){
                 Critter c = iterator.next();
-                if(c.getPathList().size() < nearestCritter.getPathList().size()){
+                if(c.getMovingBehavior().getPathList().size() < nearestCritter.getMovingBehavior().getPathList().size()){
                     nearestCritter = c;
                 }
             }

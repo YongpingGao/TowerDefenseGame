@@ -1,7 +1,6 @@
 package view.maingameview;
 
 import protocol.DrawingDataPanelDelegate;
-import sun.jvm.hotspot.types.JBooleanField;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,9 +10,7 @@ import java.awt.*;
  */
 public class GameDataPanel extends JPanel implements DrawingDataPanelDelegate{
 
-    public JButton TargetBasedOnWeakestButton;
-    public JButton TargetBasedOnStrongestButton;
-    public JButton TargetBasedOnNearestButton;
+
 
     public JLabel balanceLabel;
     public JLabel coinsLabel;
@@ -21,34 +18,27 @@ public class GameDataPanel extends JPanel implements DrawingDataPanelDelegate{
 
     public JLabel infoLabel;
     public JButton waveStartButton;
-    public JButton exitButton;
+    public JButton showLogButton;
 
 
     public GameDataPanel() {
 
-        setLayout(new GridLayout(3,3));
-        TargetBasedOnWeakestButton = new JButton("TargetBasedOnWeakest");
-        TargetBasedOnStrongestButton = new JButton("TargetBasedOnStrongest");
-        TargetBasedOnNearestButton = new JButton("TargetBasedOnNearest");
+        setLayout(new GridLayout(3,2));
 
         balanceLabel = new JLabel("balanceLabel");
         coinsLabel = new JLabel("coinsLabel");
         waveNumLabel = new JLabel("Wave: ");
 
         infoLabel = new JLabel("infoLabel");
-        waveStartButton = new JButton("Next Wave");
-        exitButton = new JButton("exitButton");
+        waveStartButton = new JButton("Game Start");
+        showLogButton = new JButton("showLogButton");
 
-
-        add(TargetBasedOnWeakestButton);
-        add(TargetBasedOnStrongestButton);
-        add(TargetBasedOnNearestButton);
         add(balanceLabel);
         add(coinsLabel);
         add(waveNumLabel);
         add(infoLabel);
         add(waveStartButton);
-        add(exitButton);
+        add(showLogButton);
 
 
     }
@@ -73,4 +63,5 @@ public class GameDataPanel extends JPanel implements DrawingDataPanelDelegate{
     public void reloadInfoDataView(String info) {
         infoLabel.setText(info);
     }
+
 }

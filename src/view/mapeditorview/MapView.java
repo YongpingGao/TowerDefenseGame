@@ -3,7 +3,7 @@ package view.mapeditorview;
 import model.map.GameMap;
 import protocol.DrawingMapDelegate;
 import view.BaseWindowView;
-import model.drawing.GameMapDrawing;
+import view.map.GameMapDrawing;
 
 import javax.swing.*;
 import java.awt.*;
@@ -37,8 +37,9 @@ public class MapView extends JPanel {
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
-            GameMapDrawing.drawMapAndTower(g, map, null, this);
+            GameMapDrawing.drawGameMap(g, map);
         }
+
 
         @Override
         public void refreshMap(GameMap map) {

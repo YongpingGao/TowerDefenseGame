@@ -12,7 +12,7 @@ public class TargetBasedOnWeakest implements TowerShootingStrategy {
 
     @Override
     public Critter targetOnCritters(Set<Critter> crittersInRange) {
-        if(crittersInRange.size() > 0){
+        if(!crittersInRange.isEmpty()){
             Iterator<Critter> iterator = crittersInRange.iterator();
             Critter weakestCritter = iterator.next();
             while(iterator.hasNext()){
