@@ -1,9 +1,5 @@
 package model.tower;
 
-
-import model.gamelog.Log;
-import model.gamelog.LogType;
-import model.gamelog.LoggerCollection;
 import view.map.Position;
 import view.tower.TowerShootingRangeView;
 import view.tower.TowerShootingView;

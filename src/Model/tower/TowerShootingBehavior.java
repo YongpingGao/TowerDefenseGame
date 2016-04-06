@@ -1,6 +1,7 @@
 package model.tower;
 
 import model.critter.Critter;
+import model.tower.shootingstrategy.TargetBasedOnWeakest;
 import model.tower.shootingstrategy.TowerShootingStrategy;
 import protocol.TowerDidShotDelegate;
 
@@ -14,7 +15,7 @@ public class TowerShootingBehavior {
     // tower shooting behavior
     protected int power;
     protected int rateOfFire;
-    protected TowerShootingStrategy shootingStrategy;
+    protected TowerShootingStrategy shootingStrategy = new TargetBasedOnWeakest();
     protected boolean isShooting;
     protected boolean timeToShoot;
 
@@ -61,7 +62,13 @@ public class TowerShootingBehavior {
         this.towerDidShotDelegate = towerDidShotDelegate;
     }
 
+    public void setShootingStrategy(TowerShootingStrategy shootingStrategy) {
+        this.shootingStrategy = shootingStrategy;
+    }
 
+    public TowerShootingStrategy getShootingStrategy() {
+        return shootingStrategy;
+    }
 
     public void shoot() {}
 

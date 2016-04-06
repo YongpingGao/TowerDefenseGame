@@ -1,9 +1,9 @@
 package controller;
 
 import model.critter.CritterMovingBehavior;
-import model.gamelog.Log;
-import model.gamelog.LogType;
-import model.gamelog.LoggerCollection;
+import model.tower.shootingstrategy.TargetBasedOnNearest;
+import model.tower.shootingstrategy.TargetBasedOnStrongest;
+import model.tower.shootingstrategy.TargetBasedOnWeakest;
 import protocol.DrawingMapDelegate;
 import view.map.Drawing;
 import model.tower.TowerFactory;
@@ -110,14 +110,6 @@ public class MainGameController {
                 mainGameView.topView.gameDataPanel.waveStartButton.setEnabled(false);
             }
         });
-
-        mainGameView.topView.gameDataPanel.showLogButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(LoggerCollection.getInstance().showAllLog());
-            }
-        });
-
     }
 
     private void initCrittersForWave(int waveNum) {
@@ -144,7 +136,6 @@ public class MainGameController {
                         } else {
                             account.withDraw(newPrice - oldPrice);
                             drawingDataPanelDelegate.reloadBalanceDataView(account.getBalance());
-                            LoggerCollection.getInstance().addLog(new Log(LogType.Tower, currentIndex, "Player update a tower to: " + currentTower.getTowerType() + " at position " + currentIndex));
                         }
                         refreshGamePanelsView();
                     } else { // warning!
@@ -164,6 +155,30 @@ public class MainGameController {
                     gameMap.getCells().set(currentIndex, CellState.Grass);
                     currentIndex = -1;
                     refreshGamePanelsView();
+                }
+            }
+        });
+
+        mainGameView.endView.towerUpgradeSellPanel.strategyComboBox.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (currentTower != null && currentTower.getPosition() != null) {
+                    if (e.getSource() instanceof JComboBox) {
+                        JComboBox cb = (JComboBox)(e.getSource());
+                        String strategy = (String)cb.getSelectedItem();
+                        switch (strategy) {
+                            case "Target On Weakest":
+                                currentTower.getTowerShootingBehavior().setShootingStrategy(new TargetBasedOnWeakest());
+                                break;
+                            case "Target On Strongest":
+                                currentTower.getTowerShootingBehavior().setShootingStrategy(new TargetBasedOnStrongest());
+                                break;
+                            case "Target On Nearest to End":
+                                currentTower.getTowerShootingBehavior().setShootingStrategy(new TargetBasedOnNearest());
+                                break;
+                        }
+                    }
                 }
             }
         });

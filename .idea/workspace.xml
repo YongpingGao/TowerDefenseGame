@@ -2,68 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8e59cbb-50ba-42ac-b72f-62aac256f056" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/tower/BurningTower.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/wave/WaveBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/map/Drawing.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/map/GameMapDrawing.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/CritterA.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/CritterB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/CritterC.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/CritterD.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/CritterName.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/drawing/CritterDrawing.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/drawing/Drawing.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/drawing/GameMapDrawing$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/drawing/GameMapDrawing.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/imagecollection/CritterImageCollection.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/DrawingShootingEffect.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/IceTower$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/NormalTower$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/NormalTower.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/PoisonTower$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/PoisonTower.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/ShootingBehavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/ShootingEffect$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/wave/Wave$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/wave/Wave$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/wave/Wave.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$12.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$13.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/imagecollection/ImageCollection.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/imagecollection/MapImageCollection.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/imagecollection/TowerImageCollection.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerName.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/critter/CritterA.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/critter/CritterB.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/critter/CritterC.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/critter/CritterD.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/critter/CritterName.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/drawing/CritterDrawing.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/drawing/Drawing.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/drawing/GameMapDrawing.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/imagecollection/CritterImageCollection.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/tower/DrawingShootingEffect.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/tower/NormalTower.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/tower/PoisonTower.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/tower/ShootingBehavior.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/tower/TowerType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/wave/Wave.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/imagecollection/ImageCollection.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/model/imagecollection/TowerImageCollection.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/model/imagecollection/MapImageCollection.java" afterPath="$PROJECT_DIR$/src/view/map/MapImageCollection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/Map/GameMap.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/Map/GameMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/Map/mapvalidation/CirclePathValidator.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/Map/mapvalidation/CirclePathValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/Critter.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/Critter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/CritterCollection.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/critter/CritterCollection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/IceTower.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/IceTower.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/ShootingEffect.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/ShootingEffect.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/shootingstrategy/TargetBasedOnNearest.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/shootingstrategy/TargetBasedOnNearest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/shootingstrategy/TargetBasedOnWeakest.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/tower/shootingstrategy/TargetBasedOnWeakest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/wave/WaveFactory.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Model/wave/WaveFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/Protocol/DrawingPanelDelegate.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/Protocol/DrawingPanelDelegate.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/gamelog/Log.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/gamelog/LogType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/gamelog/LoggerCollection.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$1.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$10.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$2.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$3.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$4.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$4.class" />
@@ -73,45 +16,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$8.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$9.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MainGameController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MapEditorController$3.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/MapEditorController$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/TowerDefenseGameDriver$1.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/TowerDefenseGameDriver$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/TowerDefenseGameDriver.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/controller/TowerDefenseGameDriver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/Tower.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/Tower.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerCollection.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerCollection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory$1.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/model/tower/TowerFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/protocol/DrawingMapInGameDelegate.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/protocol/DrawingMapInGameDelegate.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/GameDataPanel.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/GameDataPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/MapView$MapPanel.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/MapView$MapPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/MapView.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/MapView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/TowerSelectionPanel.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/TowerSelectionPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/TowerSpecificationPanel.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/TowerSpecificationPanel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/TowerUpgradeSellPanel.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/maingameview/TowerUpgradeSellPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/mapeditorview/MapView$MapPanel.class" afterPath="$PROJECT_DIR$/out/production/TowerDefenseGame/view/mapeditorview/MapView$MapPanel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps.json" afterPath="$PROJECT_DIR$/maps.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Map/GameMap.java" afterPath="$PROJECT_DIR$/src/Model/Map/GameMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/critter/Critter.java" afterPath="$PROJECT_DIR$/src/Model/critter/Critter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/critter/CritterCollection.java" afterPath="$PROJECT_DIR$/src/Model/critter/CritterCollection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/tower/IceTower.java" afterPath="$PROJECT_DIR$/src/Model/tower/IceTower.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/tower/ShootingEffect.java" afterPath="$PROJECT_DIR$/src/Model/tower/ShootingEffect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/tower/shootingstrategy/TargetBasedOnNearest.java" afterPath="$PROJECT_DIR$/src/Model/tower/shootingstrategy/TargetBasedOnNearest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/tower/shootingstrategy/TargetBasedOnWeakest.java" afterPath="$PROJECT_DIR$/src/Model/tower/shootingstrategy/TargetBasedOnWeakest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/wave/WaveFactory.java" afterPath="$PROJECT_DIR$/src/Model/wave/WaveFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Protocol/DrawingMapInGameDelegate.java" afterPath="$PROJECT_DIR$/src/Protocol/DrawingMapInGameDelegate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Protocol/DrawingPanelDelegate.java" afterPath="$PROJECT_DIR$/src/Protocol/DrawingPanelDelegate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/MainGameController.java" afterPath="$PROJECT_DIR$/src/controller/MainGameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/MapEditorController.java" afterPath="$PROJECT_DIR$/src/controller/MapEditorController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/TowerDefenseGameDriver.java" afterPath="$PROJECT_DIR$/src/controller/TowerDefenseGameDriver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/Tower.java" afterPath="$PROJECT_DIR$/src/model/tower/Tower.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/TowerCollection.java" afterPath="$PROJECT_DIR$/src/model/tower/TowerCollection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/tower/TowerFactory.java" afterPath="$PROJECT_DIR$/src/model/tower/TowerFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/maingameview/GameDataPanel.java" afterPath="$PROJECT_DIR$/src/view/maingameview/GameDataPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/maingameview/MapView.java" afterPath="$PROJECT_DIR$/src/view/maingameview/MapView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/maingameview/TowerSelectionPanel.java" afterPath="$PROJECT_DIR$/src/view/maingameview/TowerSelectionPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/maingameview/TowerSpecificationPanel.java" afterPath="$PROJECT_DIR$/src/view/maingameview/TowerSpecificationPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/maingameview/TowerUpgradeSellPanel.java" afterPath="$PROJECT_DIR$/src/view/maingameview/TowerUpgradeSellPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/mapeditorview/MapView.java" afterPath="$PROJECT_DIR$/src/view/mapeditorview/MapView.java" />
     </list>
     <ignored path="TowerDefenseGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -132,7 +45,55 @@
     <favorites_list name="TowerDefenseGame" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MainGameController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controller/MainGameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.2034783">
+              <caret line="161" column="57" selection-start-line="161" selection-start-column="57" selection-end-line="161" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TowerUpgradeSellPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/maingameview/TowerUpgradeSellPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tower.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/tower/Tower.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TowerShootingBehavior.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/tower/TowerShootingBehavior.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+              <folding>
+                <element signature="e#1701#1702#0" expanded="true" />
+                <element signature="e#1740#1741#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -160,8 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/model/drawing/GameMapDrawing.java" />
-        <option value="$PROJECT_DIR$/src/view/critter/CritterView.java" />
         <option value="$PROJECT_DIR$/src/model/imagecollection/TowerImageCollection.java" />
         <option value="$PROJECT_DIR$/src/view/maingameview/TowerSelectionPanel.java" />
         <option value="$PROJECT_DIR$/src/model/tower/PoisonTower.java" />
@@ -176,19 +135,15 @@
         <option value="$PROJECT_DIR$/src/view/tower/TowerShootingRangeView.java" />
         <option value="$PROJECT_DIR$/src/model/tower/TowerFactory.java" />
         <option value="$PROJECT_DIR$/src/model/tower/SplashTowerShootingBehavior.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnWeakest.java" />
         <option value="$PROJECT_DIR$/src/view/tower/TowerShootingView.java" />
         <option value="$PROJECT_DIR$/src/model/tower/IceTowerShootingBehavior.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/BurningTowerShootingBehavior.java" />
         <option value="$PROJECT_DIR$/src/controller/TowerDefenseGameDriver.java" />
         <option value="$PROJECT_DIR$/src/view/mapeditorview/MapView.java" />
         <option value="$PROJECT_DIR$/src/protocol/DrawingMapInGameDelegate.java" />
         <option value="$PROJECT_DIR$/src/view/maingameview/MapView.java" />
         <option value="$PROJECT_DIR$/src/model/critter/CritterMovingBehavior.java" />
         <option value="$PROJECT_DIR$/src/model/critter/CritterCollection.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/TowerShootingBehavior.java" />
         <option value="$PROJECT_DIR$/src/model/wave/WaveFactory.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnNearest.java" />
         <option value="$PROJECT_DIR$/src/model/critter/Critter.java" />
         <option value="$PROJECT_DIR$/src/model/tower/shootingstrategy/TowerBasedOnClosestToTower.java" />
         <option value="$PROJECT_DIR$/src/view/tower/TowerType.java" />
@@ -198,19 +153,25 @@
         <option value="$PROJECT_DIR$/src/model/tower/IceTower.java" />
         <option value="$PROJECT_DIR$/src/model/tower/SplashTower.java" />
         <option value="$PROJECT_DIR$/src/model/gamelog/aa.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/TowerCollection.java" />
-        <option value="$PROJECT_DIR$/src/model/tower/Tower.java" />
         <option value="$PROJECT_DIR$/src/model/gamelog/Log.java" />
         <option value="$PROJECT_DIR$/src/model/gamelog/LoggerCollection.java" />
         <option value="$PROJECT_DIR$/src/protocol/DrawingDataPanelDelegate.java" />
         <option value="$PROJECT_DIR$/src/protocol/DrawingPanelDelegate.java" />
-        <option value="$PROJECT_DIR$/src/view/maingameview/GameDataPanel.java" />
-        <option value="$PROJECT_DIR$/src/view/maingameview/TowerUpgradeSellPanel.java" />
         <option value="$PROJECT_DIR$/src/view/maingameview/TowerSpecificationPanel.java" />
-        <option value="$PROJECT_DIR$/src/controller/MainGameController.java" />
         <option value="$PROJECT_DIR$/src/model/wave/WaveBuilder.java" />
         <option value="$PROJECT_DIR$/src/model/tower/ShootingEffect.java" />
         <option value="$PROJECT_DIR$/src/model/gamelog/LogType.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/TowerCollection.java" />
+        <option value="$PROJECT_DIR$/src/view/maingameview/GameDataPanel.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/Tower.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/BurningTowerShootingBehavior.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/shootingstrategy/TowerShootingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnWeakest.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnStrongest.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnNearest.java" />
+        <option value="$PROJECT_DIR$/src/controller/MainGameController.java" />
+        <option value="$PROJECT_DIR$/src/model/tower/TowerShootingBehavior.java" />
+        <option value="$PROJECT_DIR$/src/view/maingameview/TowerUpgradeSellPanel.java" />
       </list>
     </option>
   </component>
@@ -251,6 +212,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -311,116 +273,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapeditorview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapchooseview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="map" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mainmenuview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="maingameview" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -436,46 +288,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="critter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protocol" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -494,10 +306,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wave" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -563,97 +371,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="map" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamelog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="critter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TowerDefenseGame" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1119,55 +842,57 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="822" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32138115" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1992032" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27083334" sideWeight="0.49527186" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27083334" sideWeight="0.49527186" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15015975" sideWeight="0.50472814" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39693877" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39693877" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32289156" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32138115" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30240965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1992032" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22031474" sideWeight="0.49527186" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27083334" sideWeight="0.49527186" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15015975" sideWeight="0.50472814" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15015975" sideWeight="0.50472814" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39693877" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1198,6 +923,35 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerShootingBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/maingameview/GameDataPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/map/GameMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1226,34 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnStrongest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnWeakest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28949857">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/shootingstrategy/TowerShootingStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/shootingstrategy/TowerBasedOnClosestToTower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.048249763">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/tower/TowerType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1265,6 +991,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="472" column="16" selection-start-line="472" selection-start-column="16" selection-end-line="472" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1272,36 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/gamelog/LoggerCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="e#424#425#0" expanded="false" />
-            <element signature="e#456#457#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/gamelog/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MainGameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="372" column="1" selection-start-line="33" selection-start-column="0" selection-end-line="372" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1309,7 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1325,7 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1341,14 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/BurningTowerShootingBehavior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="124" selection-start-line="15" selection-start-column="108" selection-end-line="15" selection-end-column="124" />
           <folding />
         </state>
       </provider>
@@ -1373,7 +1060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1381,7 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1389,24 +1074,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/Tower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1419,19 +1086,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerShootingBehavior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/wave/WaveBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1447,14 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/maingameview/GameDataPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1483,19 +1133,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/maingameview/TowerUpgradeSellPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="69" selection-start-line="13" selection-start-column="69" selection-end-line="13" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/protocol/DrawingDataPanelDelegate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1503,7 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1511,7 +1151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1527,7 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1535,9 +1173,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1560,16 +1195,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnNearest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/maingameview/MapView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1582,9 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32827586">
           <caret line="16" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1592,9 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5627586">
           <caret line="28" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1602,9 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44551724">
           <caret line="35" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1612,14 +1228,107 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnNearest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61490685">
+          <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/gamelog/LogType.java">
+    <entry file="file://$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnStrongest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16413793">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.29813665">
+          <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/shootingstrategy/TargetBasedOnWeakest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/shootingstrategy/TowerShootingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38716355">
+          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/BurningTowerShootingBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.070393376">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/maingameview/GameDataPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.035196688">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/Tower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/tower/TowerShootingBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <element signature="e#1701#1702#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/maingameview/TowerUpgradeSellPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MainGameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.2034783">
+          <caret line="161" column="57" selection-start-line="161" selection-start-column="57" selection-end-line="161" selection-end-column="57" />
           <folding />
         </state>
       </provider>
