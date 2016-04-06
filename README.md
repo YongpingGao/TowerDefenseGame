@@ -41,7 +41,7 @@
 ![Image of game1](screenshots/1.png)
 ![Image of game2](screenshots/2.png)
  
-### other details
+### Other Details
 1. This game is purely written in Java (Java Swing and AWT)
 2. Map files are saved in JSON and by using GSON library
 3. The image resources (Towers and critters) are from "Tower Defense" @ Com2uS USA)
