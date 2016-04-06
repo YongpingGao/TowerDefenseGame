@@ -1,2 +1,5 @@
-out/*
-
+.project
+.DS_Store
+.idea/
+6441GameProject.iml
+out/production/
